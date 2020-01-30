@@ -1,0 +1,15 @@
+GET https://dcas-l6.test/api/v1/upload/{{filename}}
+
+###
+
+POST https://dcas-l6.test/api/v1/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; filename="upload-me.txt"
+Content-Type: application/json
+
+< ./Stubs/upload-me.txt
+--WebAppBoundary--
+
+###

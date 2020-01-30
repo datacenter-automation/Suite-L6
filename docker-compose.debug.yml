@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  dcas-l57:
+    image: dcas-l6
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
