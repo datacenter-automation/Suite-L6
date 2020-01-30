@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"php-cs-fixer.executablePath": "/home/alexrenner/.composer/vendor/bin/php-cs-fixer",
+		"php-cs-fixer.config": "/home/alexrenner/Code/dcas-l6/.php_cs",
+		"php-cs-fixer.formatHtml": true,
+		"php-cs-fixer.onsave": true
+	}
+}

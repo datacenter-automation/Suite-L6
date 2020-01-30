@@ -1,0 +1,573 @@
+.
+├── [4.0K]  ./app
+│   ├── [4.0K]  ./app/Builder
+│   │   └── [ 419]  ./app/Builder/MyBuilder.php
+│   ├── [4.0K]  ./app/Console
+│   │   ├── [4.0K]  ./app/Console/Commands
+│   │   │   ├── [ 931]  ./app/Console/Commands/ClearProjectFiles.php
+│   │   │   ├── [1.4K]  ./app/Console/Commands/CloseInactiveGithubIssuesAndPRs.php
+│   │   │   ├── [1.5K]  ./app/Console/Commands/MakePHPDevelopmentReports.php
+│   │   │   ├── [ 837]  ./app/Console/Commands/MakeTreeOutput.php
+│   │   │   └── [ 712]  ./app/Console/Commands/TestProgressBar.php
+│   │   └── [ 644]  ./app/Console/Kernel.php
+│   ├── [4.0K]  ./app/Contracts
+│   │   └── [ 518]  ./app/Contracts/HttpClient.php
+│   ├── [4.0K]  ./app/EloquentFilters
+│   ├── [4.0K]  ./app/Events
+│   │   ├── [ 809]  ./app/Events/FileDownloadRequested.php
+│   │   └── [ 512]  ./app/Events/FileUploaded.php
+│   ├── [4.0K]  ./app/Exceptions
+│   │   ├── [4.0K]  ./app/Exceptions/Api
+│   │   │   ├── [1.5K]  ./app/Exceptions/Api/BaseException.php
+│   │   │   └── [ 163]  ./app/Exceptions/Api/ResourceNotFoundException.php
+│   │   └── [3.7K]  ./app/Exceptions/Handler.php
+│   ├── [4.0K]  ./app/General
+│   │   ├── [1.1K]  ./app/General/BuildBaseMenu.php
+│   │   ├── [ 272]  ./app/General/ClickTracker.php
+│   │   ├── [ 616]  ./app/General/DcasLogger.php
+│   │   ├── [2.7K]  ./app/General/ExtendedValidationRules.php
+│   │   ├── [ 352]  ./app/General/MenuBuilder.php
+│   │   └── [6.0K]  ./app/General/ProcessMenu.php
+│   ├── [4.0K]  ./app/Helpers
+│   │   └── [ 912]  ./app/Helpers/Logger.php
+│   ├── [4.0K]  ./app/Http
+│   │   ├── [4.0K]  ./app/Http/Controllers
+│   │   │   ├── [4.0K]  ./app/Http/Controllers/API
+│   │   │   │   ├── [ 231]  ./app/Http/Controllers/API/ApiController.php
+│   │   │   │   ├── [ 575]  ./app/Http/Controllers/API/ApiTokenController.php
+│   │   │   │   ├── [ 546]  ./app/Http/Controllers/API/UserController.php
+│   │   │   │   ├── [4.0K]  ./app/Http/Controllers/API/V1
+│   │   │   │   │   └── [2.2K]  ./app/Http/Controllers/API/V1/UploadController.php
+│   │   │   │   ├── [ 310]  ./app/Http/Controllers/API/VersionController.php
+│   │   │   │   └── [ 277]  ./app/Http/Controllers/API/WebhookController.php
+│   │   │   ├── [4.0K]  ./app/Http/Controllers/Auth
+│   │   │   │   ├── [ 966]  ./app/Http/Controllers/Auth/Auth0IndexController.php
+│   │   │   │   ├── [ 970]  ./app/Http/Controllers/Auth/ConfirmPasswordController.php
+│   │   │   │   ├── [ 667]  ./app/Http/Controllers/Auth/ForgotPasswordController.php
+│   │   │   │   ├── [2.5K]  ./app/Http/Controllers/Auth/LoginController.php
+│   │   │   │   ├── [1.8K]  ./app/Http/Controllers/Auth/RegisterController.php
+│   │   │   │   ├── [ 790]  ./app/Http/Controllers/Auth/ResetPasswordController.php
+│   │   │   │   └── [1.1K]  ./app/Http/Controllers/Auth/VerificationController.php
+│   │   │   ├── [ 541]  ./app/Http/Controllers/Controller.php
+│   │   │   ├── [ 486]  ./app/Http/Controllers/HomeController.php
+│   │   │   └── [1.7K]  ./app/Http/Controllers/LogController.php
+│   │   ├── [4.8K]  ./app/Http/Kernel.php
+│   │   ├── [4.0K]  ./app/Http/Middleware
+│   │   │   ├── [ 620]  ./app/Http/Middleware/ActiveUser.php
+│   │   │   ├── [ 629]  ./app/Http/Middleware/APIversion.php
+│   │   │   ├── [ 469]  ./app/Http/Middleware/Authenticate.php
+│   │   │   ├── [1.1K]  ./app/Http/Middleware/AuthLock.php
+│   │   │   ├── [ 324]  ./app/Http/Middleware/CheckForMaintenanceMode.php
+│   │   │   ├── [ 311]  ./app/Http/Middleware/Customer.php
+│   │   │   ├── [ 356]  ./app/Http/Middleware/CustomThrottle.php
+│   │   │   ├── [ 283]  ./app/Http/Middleware/EncryptCookies.php
+│   │   │   ├── [1.3K]  ./app/Http/Middleware/ETag.php
+│   │   │   ├── [ 311]  ./app/Http/Middleware/Internal.php
+│   │   │   ├── [ 530]  ./app/Http/Middleware/Local.php
+│   │   │   ├── [ 652]  ./app/Http/Middleware/LogRequestsWithXRequestId.php
+│   │   │   ├── [ 513]  ./app/Http/Middleware/RedirectIfAuthenticated.php
+│   │   │   ├── [4.2K]  ./app/Http/Middleware/ThrottleSimultaneousRequests.php
+│   │   │   ├── [ 340]  ./app/Http/Middleware/TrimStrings.php
+│   │   │   ├── [ 435]  ./app/Http/Middleware/TrustProxies.php
+│   │   │   ├── [ 300]  ./app/Http/Middleware/Vendor.php
+│   │   │   ├── [ 472]  ./app/Http/Middleware/VerifyCsrfToken.php
+│   │   │   └── [ 313]  ./app/Http/Middleware/WhiteGlove.php
+│   │   ├── [4.0K]  ./app/Http/Requests
+│   │   │   └── [4.0K]  ./app/Http/Requests/API
+│   │   │       └── [1.1K]  ./app/Http/Requests/API/FormRequest.php
+│   │   └── [4.0K]  ./app/Http/Resources
+│   │       └── [ 944]  ./app/Http/Resources/UserResource.php
+│   ├── [4.0K]  ./app/Jobs
+│   ├── [4.0K]  ./app/Listeners
+│   │   ├── [ 507]  ./app/Listeners/DecryptFile.php
+│   │   ├── [ 370]  ./app/Listeners/EncryptFile.php
+│   │   └── [ 636]  ./app/Listeners/LoggingListener.php
+│   ├── [3.3K]  ./app/Logger.php
+│   ├── [2.5K]  ./app/LoginAttempt.php
+│   ├── [4.0K]  ./app/Macros
+│   │   └── [ 373]  ./app/Macros/Request.php
+│   ├── [4.0K]  ./app/Mailboxes
+│   ├── [4.0K]  ./app/MailProcessing
+│   │   └── [ 663]  ./app/MailProcessing/DefaultHook.php
+│   ├── [4.0K]  ./app/Models
+│   │   ├── [4.0K]  ./app/Models/Api
+│   │   ├── [1.6K]  ./app/Models/BaseModel.php
+│   │   ├── [4.0K]  ./app/Models/Customer
+│   │   ├── [4.0K]  ./app/Models/Internal
+│   │   ├── [4.0K]  ./app/Models/Vendor
+│   │   ├── [4.0K]  ./app/Models/Website
+│   │   │   ├── [4.0K]  ./app/Models/Website/MenuPage.php
+│   │   │   └── [3.7K]  ./app/Models/Website/SubMenuPage.php
+│   │   └── [4.0K]  ./app/Models/Whiteglove
+│   ├── [4.0K]  ./app/ModelStates
+│   │   └── [ 237]  ./app/ModelStates/BaseState.php
+│   ├── [4.0K]  ./app/Notifications
+│   │   ├── [ 956]  ./app/Notifications/BaseFcmNotification.php
+│   │   └── [1.6K]  ./app/Notifications/NewLoginAttempt.php
+│   ├── [4.0K]  ./app/Observers
+│   ├── [4.0K]  ./app/Presenters
+│   ├── [4.0K]  ./app/Providers
+│   │   ├── [1.0K]  ./app/Providers/AppServiceProvider.php
+│   │   ├── [ 685]  ./app/Providers/AuthServiceProvider.php
+│   │   ├── [ 380]  ./app/Providers/BroadcastServiceProvider.php
+│   │   ├── [1.1K]  ./app/Providers/EventServiceProvider.php
+│   │   ├── [ 616]  ./app/Providers/GitHubServiceProvider.php
+│   │   ├── [ 375]  ./app/Providers/MailboxServiceProvider.php
+│   │   ├── [3.2K]  ./app/Providers/MenuServiceProvider.php
+│   │   ├── [2.5K]  ./app/Providers/OtherValidationRulesProvider.php
+│   │   └── [4.6K]  ./app/Providers/RouteServiceProvider.php
+│   ├── [4.0K]  ./app/Repositories
+│   │   └── [1.2K]  ./app/Repositories/CustomUserRepository.php
+│   ├── [4.0K]  ./app/Rules
+│   ├── [4.0K]  ./app/Scopes
+│   ├── [4.0K]  ./app/Services
+│   │   └── [4.0K]  ./app/Services/GitHub
+│   │       ├── [ 627]  ./app/Services/GitHub/GitHub.php
+│   │       └── [1.8K]  ./app/Services/GitHub/Issue.php
+│   ├── [4.0K]  ./app/Traits
+│   │   ├── [3.4K]  ./app/Traits/ApiRespondable.php
+│   │   ├── [ 657]  ./app/Traits/Encryptable.php
+│   │   ├── [ 229]  ./app/Traits/Lockable.php
+│   │   ├── [3.3K]  ./app/Traits/PasswordlessAuth.php
+│   │   ├── [ 502]  ./app/Traits/ProgressBarOutput.php
+│   │   └── [ 717]  ./app/Traits/UsesUuid.php
+│   ├── [4.0K]  ./app/Transformers
+│   ├── [5.7K]  ./app/User.php
+│   ├── [4.0K]  ./app/Validators
+│   └── [4.0K]  ./app/Wrappers
+│       └── [ 984]  ./app/Wrappers/GuzzleWrapper.php
+├── [1.6K]  ./artisan
+├── [ 588]  ./behat.yml
+├── [4.0K]  ./bin
+│   ├── [4.0K]  ./bin/Unix
+│   │   ├── [ 170]  ./bin/Unix/start-selenium2.sh
+│   │   ├── [ 474]  ./bin/Unix/sync-internal-vendor-directory.sh
+│   │   └── [ 700]  ./bin/Unix/update-framework.sh
+│   └── [4.0K]  ./bin/Windows
+│       ├── [ 183]  ./bin/Windows/add-console-aliases.bat
+│       └── [  76]  ./bin/Windows/composer.bat
+├── [5.4K]  ./composer.json
+├── [2.3K]  ./composer.old.json
+├── [4.0K]  ./config
+│   ├── [ 10K]  ./config/adminlte.php
+│   ├── [ 12K]  ./config/app.php
+│   ├── [ 226]  ./config/arrayredactor.php
+│   ├── [1.9K]  ./config/authlog.php
+│   ├── [3.7K]  ./config/auth.php
+│   ├── [1.6K]  ./config/broadcasting.php
+│   ├── [3.0K]  ./config/cache.php
+│   ├── [ 596]  ./config/cors.php
+│   ├── [5.7K]  ./config/database.php
+│   ├── [ 491]  ./config/datacenter-automation-suite.php
+│   ├── [8.0K]  ./config/debugbar.php
+│   ├── [ 165]  ./config/debug-server.php
+│   ├── [ 359]  ./config/eloquent-builder.php
+│   ├── [3.4K]  ./config/erd-generator.php
+│   ├── [2.2K]  ./config/filesystems.php
+│   ├── [ 545]  ./config/file-vault.php
+│   ├── [1.4K]  ./config/flare.php
+│   ├── [2.1K]  ./config/github.php
+│   ├── [1.6K]  ./config/hashing.php
+│   ├── [ 688]  ./config/honeybadger.php
+│   ├── [1.5K]  ./config/honeypot.php
+│   ├── [6.3K]  ./config/ide-helper.php
+│   ├── [4.3K]  ./config/ignition.php
+│   ├── [ 990]  ./config/javascript.php
+│   ├── [9.3K]  ./config/l5-swagger.php
+│   ├── [ 229]  ./config/lapse.php
+│   ├── [3.6K]  ./config/laravel-auth0.php
+│   ├── [1.8K]  ./config/laravel-code-generator.php
+│   ├── [1.9K]  ./config/laravel-form-builder.php
+│   ├── [1.2K]  ./config/laravel-impersonate-ui.php
+│   ├── [ 969]  ./config/laravel-swagger.php
+│   ├── [1.4K]  ./config/laroute.php
+│   ├── [ 764]  ./config/loading.php
+│   ├── [3.0K]  ./config/logging.php
+│   ├── [1.8K]  ./config/mailbox.php
+│   ├── [4.6K]  ./config/mail.php
+│   ├── [1.9K]  ./config/mailsceptor.php
+│   ├── [ 584]  ./config/opcache.php
+│   ├── [ 247]  ./config/open-on-make.php
+│   ├── [4.3K]  ./config/permission.php
+│   ├── [2.7K]  ./config/queue.php
+│   ├── [3.3K]  ./config/scout.php
+│   ├── [1021]  ./config/services.php
+│   ├── [6.8K]  ./config/session.php
+│   ├── [ 319]  ./config/shared-data.php
+│   ├── [1.8K]  ./config/snipe.php
+│   ├── [1009]  ./config/snooze.php
+│   ├── [1.7K]  ./config/spy.php
+│   ├── [1004]  ./config/tinker.php
+│   ├── [1.6K]  ./config/tinx.php
+│   ├── [1.7K]  ./config/trustedproxy.php
+│   ├── [1.0K]  ./config/view.php
+│   └── [ 939]  ./config/web-tinker.php
+├── [4.0K]  ./database
+│   ├── [4.0K]  ./database/factories
+│   │   ├── [ 487]  ./database/factories/LoggerFactory.php
+│   │   ├── [ 260]  ./database/factories/LoginAttemptFactory.php
+│   │   ├── [ 447]  ./database/factories/MenuPageFactory.php
+│   │   ├── [ 406]  ./database/factories/SubMenuPageFactory.php
+│   │   └── [1.3K]  ./database/factories/UserFactory.php
+│   ├── [4.0K]  ./database/migrations
+│   │   ├── [ 939]  ./database/migrations/2014_10_12_000000_create_users_table.php
+│   │   ├── [ 683]  ./database/migrations/2014_10_12_100000_create_password_resets_table.php
+│   │   ├── [ 799]  ./database/migrations/2018_09_06_135819_create_emails_table.php
+│   │   ├── [ 965]  ./database/migrations/2018_11_12_104516_create_menu_pages_table.php
+│   │   ├── [ 964]  ./database/migrations/2019_05_03_000001_create_customer_columns.php
+│   │   ├── [1.0K]  ./database/migrations/2019_05_03_000002_create_subscriptions_table.php
+│   │   ├── [ 723]  ./database/migrations/2019_07_15_164435_create_devices_table.php
+│   │   ├── [ 789]  ./database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+│   │   ├── [1.6K]  ./database/migrations/2019_09_19_000000_create_authlog_table.php
+│   │   ├── [ 843]  ./database/migrations/2019_11_28_115814_create_uploads_table.php
+│   │   ├── [ 973]  ./database/migrations/2019_12_06_003922_create_sub_menu_pages_table.php
+│   │   ├── [ 947]  ./database/migrations/2019_12_06_004633_create_menu_page_sub_menu_page_pivot_table.php
+│   │   ├── [3.6K]  ./database/migrations/2019_12_20_235946_create_permission_tables.php
+│   │   ├── [ 872]  ./database/migrations/2019_12_24_073650_create_logger_table.php
+│   │   ├── [ 705]  ./database/migrations/2020_01_02_195909_create_login_attempts_table.php
+│   │   ├── [ 823]  ./database/migrations/2020_01_05_004742_create_sessions_table.php
+│   │   ├── [ 634]  ./database/migrations/2020_01_29_011010_add_sub_to_users_table.php
+│   │   └── [ 674]  ./database/migrations/2020_01_29_170141_create_mailbox_inbound_emails_table.php
+│   ├── [4.0K]  ./database/schema
+│   └── [4.0K]  ./database/seeds
+│       ├── [ 247]  ./database/seeds/DatabaseSeeder.php
+│       └── [ 563]  ./database/seeds/UserTableSeeder.php
+├── [4.0K]  ./dbspy
+├── [ 280]  ./dcas-l6
+├── [ 139]  ./docker-compose.debug.yml
+├── [  95]  ./docker-compose.yml
+├── [ 150]  ./Dockerfile
+├── [ 273]  ./do.this
+├── [4.0K]  ./features
+│   └── [ 586]  ./features/user_auth.feature
+├── [150K]  ./graph.png
+├── [ 207]  ./horizon-supervisor.conf
+├── [  38]  ./http-client.env.json
+├── [  76]  ./http-client.private.env.json
+├── [ 253]  ./_ide_helper_models.php
+├── [5.0K]  ./LICENSE.html
+├── [800K]  ./mysql-connector-java-5.1.44.jar
+├── [6.1K]  ./package.json
+├── [ 533]  ./phpbench.json
+├── [2.5K]  ./phpcs-ruleset.xml
+├── [2.4K]  ./phpmd-ruleset.xml
+├── [ 145]  ./phpspec.yml
+├── [ 716]  ./phpunit.dusk.xml
+├── [1.5K]  ./phpunit.xml
+├── [4.0K]  ./public
+│   ├── [4.0K]  ./public/css
+│   │   └── [1.7M]  ./public/css/app.css
+│   ├── [   0]  ./public/favicon.ico
+│   ├── [4.0K]  ./public/fonts
+│   │   ├── [132K]  ./public/fonts/FontAwesome.otf
+│   │   ├── [162K]  ./public/fonts/fontawesome-webfont.eot
+│   │   ├── [434K]  ./public/fonts/fontawesome-webfont.svg
+│   │   ├── [162K]  ./public/fonts/fontawesome-webfont.ttf
+│   │   ├── [ 96K]  ./public/fonts/fontawesome-webfont.woff
+│   │   ├── [ 75K]  ./public/fonts/fontawesome-webfont.woff2
+│   │   ├── [110K]  ./public/fonts/ionicons.eot
+│   │   ├── [305K]  ./public/fonts/ionicons.svg
+│   │   ├── [110K]  ./public/fonts/ionicons.ttf
+│   │   ├── [ 64K]  ./public/fonts/ionicons.woff
+│   │   ├── [ 49K]  ./public/fonts/ionicons.woff2
+│   │   ├── [ 41K]  ./public/fonts/Material-Design-Iconic-Font.eot
+│   │   ├── [233K]  ./public/fonts/Material-Design-Iconic-Font.svg
+│   │   ├── [ 97K]  ./public/fonts/Material-Design-Iconic-Font.ttf
+│   │   ├── [ 49K]  ./public/fonts/Material-Design-Iconic-Font.woff
+│   │   ├── [ 37K]  ./public/fonts/Material-Design-Iconic-Font.woff2
+│   │   ├── [ 53K]  ./public/fonts/Simple-Line-Icons.eot
+│   │   ├── [233K]  ./public/fonts/Simple-Line-Icons.svg
+│   │   ├── [ 53K]  ./public/fonts/Simple-Line-Icons.ttf
+│   │   ├── [ 79K]  ./public/fonts/Simple-Line-Icons.woff
+│   │   └── [ 29K]  ./public/fonts/Simple-Line-Icons.woff2
+│   ├── [4.0K]  ./public/img
+│   ├── [1.8K]  ./public/index.php
+│   ├── [4.0K]  ./public/js
+│   │   ├── [1.5M]  ./public/js/app.js
+│   │   ├── [ 15K]  ./public/js/laravel-routes.js
+│   │   └── [6.1K]  ./public/js/manifest.js
+│   ├── [2.2K]  ./public/mix-manifest.json
+│   └── [   0]  ./public/phpcs.xsl
+├── [ 537]  ./rector.yaml
+├── [4.0K]  ./resources
+│   ├── [4.0K]  ./resources/js
+│   │   ├── [ 253]  ./resources/js/app.js
+│   │   ├── [1.3K]  ./resources/js/bootstrap.js
+│   │   ├── [4.0K]  ./resources/js/Components
+│   │   │   └── [2.1K]  ./resources/js/Components/NotificationTest.vue
+│   │   ├── [4.0K]  ./resources/js/services
+│   │   │   ├── [ 524]  ./resources/js/services/errorHandler.js
+│   │   │   └── [ 437]  ./resources/js/services/toast.js
+│   │   └── [ 751]  ./resources/js/store.js
+│   ├── [4.0K]  ./resources/lang
+│   │   └── [4.0K]  ./resources/lang/en
+│   │       ├── [ 695]  ./resources/lang/en/auth.php
+│   │       ├── [ 538]  ./resources/lang/en/pagination.php
+│   │       ├── [ 764]  ./resources/lang/en/passwords.php
+│   │       └── [8.3K]  ./resources/lang/en/validation.php
+│   ├── [4.0K]  ./resources/laravel-code-generator
+│   │   └── [4.0K]  ./resources/laravel-code-generator/templates
+│   │       ├── [4.0K]  ./resources/laravel-code-generator/templates/default
+│   │       │   ├── [ 380]  ./resources/laravel-code-generator/templates/default/api-controller-base-class.stub
+│   │       │   ├── [  98]  ./resources/laravel-code-generator/templates/default/api-controller-call-destroy-api-resource.stub
+│   │       │   ├── [ 129]  ./resources/laravel-code-generator/templates/default/api-controller-call-destroy-success-method.stub
+│   │       │   ├── [ 111]  ./resources/laravel-code-generator/templates/default/api-controller-call-index-api-resource.stub
+│   │       │   ├── [1.4K]  ./resources/laravel-code-generator/templates/default/api-controller-call-index-success-method.stub
+│   │       │   ├── [ 100]  ./resources/laravel-code-generator/templates/default/api-controller-call-show-api-resource.stub
+│   │       │   ├── [ 128]  ./resources/laravel-code-generator/templates/default/api-controller-call-show-success-method.stub
+│   │       │   ├── [  96]  ./resources/laravel-code-generator/templates/default/api-controller-call-store-api-resource.stub
+│   │       │   ├── [ 127]  ./resources/laravel-code-generator/templates/default/api-controller-call-store-success-method.stub
+│   │       │   ├── [  98]  ./resources/laravel-code-generator/templates/default/api-controller-call-update-api-resource.stub
+│   │       │   ├── [ 129]  ./resources/laravel-code-generator/templates/default/api-controller-call-update-success-method.stub
+│   │       │   ├── [ 310]  ./resources/laravel-code-generator/templates/default/api-controller-error-response-method.stub
+│   │       │   ├── [ 401]  ./resources/laravel-code-generator/templates/default/api-controller-get-validator.stub
+│   │       │   ├── [2.8K]  ./resources/laravel-code-generator/templates/default/api-controller.stub
+│   │       │   ├── [ 457]  ./resources/laravel-code-generator/templates/default/api-controller-success-response-method.stub
+│   │       │   ├── [ 370]  ./resources/laravel-code-generator/templates/default/api-controller-transform-method.stub
+│   │       │   ├── [ 172]  ./resources/laravel-code-generator/templates/default/api-controller-validate.stub
+│   │       │   ├── [ 338]  ./resources/laravel-code-generator/templates/default/api-documentation-controller.stub
+│   │       │   ├── [ 448]  ./resources/laravel-code-generator/templates/default/api-documentation-controller-version-based.stub
+│   │       │   ├── [ 120]  ./resources/laravel-code-generator/templates/default/api-documentation-field-validation-required.stub
+│   │       │   ├── [ 592]  ./resources/laravel-code-generator/templates/default/api-documentation-index-authentication.stub
+│   │       │   ├── [ 554]  ./resources/laravel-code-generator/templates/default/api-documentation-index-failed-authentication.stub
+│   │       │   ├── [ 519]  ./resources/laravel-code-generator/templates/default/api-documentation-index-failed-to-retrieve.stub
+│   │       │   ├── [ 535]  ./resources/laravel-code-generator/templates/default/api-documentation-index-failed-validation.stub
+│   │       │   ├── [ 158]  ./resources/laravel-code-generator/templates/default/api-documentation-index-fields-list-body-row-for-model.stub
+│   │       │   ├── [ 488]  ./resources/laravel-code-generator/templates/default/api-documentation-index-fields-list-body-row.stub
+│   │       │   ├── [1.1K]  ./resources/laravel-code-generator/templates/default/api-documentation-index-fields-list.stub
+│   │       │   ├── [ 363]  ./resources/laravel-code-generator/templates/default/api-documentation-index-request.stub
+│   │       │   ├── [ 158]  ./resources/laravel-code-generator/templates/default/api-documentation-index-retrieved-fields-body-row.stub
+│   │       │   ├── [ 271]  ./resources/laravel-code-generator/templates/default/api-documentation-index-retrieved-fields.stub
+│   │       │   ├── [ 683]  ./resources/laravel-code-generator/templates/default/api-documentation-index-retrieved.stub
+│   │       │   ├── [ 16K]  ./resources/laravel-code-generator/templates/default/api-documentation-index.stub
+│   │       │   ├── [ 110]  ./resources/laravel-code-generator/templates/default/api-documentation-routes.stub
+│   │       │   ├── [ 807]  ./resources/laravel-code-generator/templates/default/api-documentation-version-based-base-controller.stub
+│   │       │   ├── [1.1K]  ./resources/laravel-code-generator/templates/default/api-resource-collection.stub
+│   │       │   ├── [1.1K]  ./resources/laravel-code-generator/templates/default/api-resource.stub
+│   │       │   ├── [ 700]  ./resources/laravel-code-generator/templates/default/api-routes.stub
+│   │       │   ├── [ 357]  ./resources/laravel-code-generator/templates/default/controller-affirm-method.stub
+│   │       │   ├── [ 149]  ./resources/laravel-code-generator/templates/default/controller-constructor.stub
+│   │       │   ├── [ 466]  ./resources/laravel-code-generator/templates/default/controller-getdata-method-5.5.stub
+│   │       │   ├── [ 372]  ./resources/laravel-code-generator/templates/default/controller-getdata-method.stub
+│   │       │   ├── [4.0K]  ./resources/laravel-code-generator/templates/default/controller.stub
+│   │       │   ├── [ 596]  ./resources/laravel-code-generator/templates/default/controller-upload-method-5.3.stub
+│   │       │   ├── [ 589]  ./resources/laravel-code-generator/templates/default/controller-upload-method.stub
+│   │       │   ├── [1.6K]  ./resources/laravel-code-generator/templates/default/create.blade.stub
+│   │       │   ├── [2.0K]  ./resources/laravel-code-generator/templates/default/edit.blade.stub
+│   │       │   ├── [  23]  ./resources/laravel-code-generator/templates/default/form.blade.stub
+│   │       │   ├── [1.0K]  ./resources/laravel-code-generator/templates/default/form-file-field.blade.stub
+│   │       │   ├── [  88]  ./resources/laravel-code-generator/templates/default/form-helper-field.blade.stub
+│   │       │   ├── [ 256]  ./resources/laravel-code-generator/templates/default/form-input-field.blade.stub
+│   │       │   ├── [ 196]  ./resources/laravel-code-generator/templates/default/form-input-wrapper.blade.stub
+│   │       │   ├── [  90]  ./resources/laravel-code-generator/templates/default/form-label-field.blade.stub
+│   │       │   ├── [ 331]  ./resources/laravel-code-generator/templates/default/form-month-field.blade.stub
+│   │       │   ├── [  32]  ./resources/laravel-code-generator/templates/default/form-nolabel-field.blade.stub
+│   │       │   ├── [ 238]  ./resources/laravel-code-generator/templates/default/form-password-field.blade.stub
+│   │       │   ├── [ 344]  ./resources/laravel-code-generator/templates/default/form-pickitems-field.blade.stub
+│   │       │   ├── [ 309]  ./resources/laravel-code-generator/templates/default/form-pickitems-inline-field.blade.stub
+│   │       │   ├── [ 655]  ./resources/laravel-code-generator/templates/default/form-request.stub
+│   │       │   ├── [ 380]  ./resources/laravel-code-generator/templates/default/form-selectmenu-field.blade.stub
+│   │       │   ├── [ 336]  ./resources/laravel-code-generator/templates/default/form-selectrange-field.blade.stub
+│   │       │   ├── [ 247]  ./resources/laravel-code-generator/templates/default/form-textarea-field.blade.stub
+│   │       │   ├── [3.5K]  ./resources/laravel-code-generator/templates/default/index.blade.stub
+│   │       │   ├── [  60]  ./resources/laravel-code-generator/templates/default/index.body.cell.blade.stub
+│   │       │   ├── [  54]  ./resources/laravel-code-generator/templates/default/index.header.cell.blade.stub
+│   │       │   ├── [  34]  ./resources/laravel-code-generator/templates/default/language.stub
+│   │       │   ├── [4.8K]  ./resources/laravel-code-generator/templates/default/layout.stub
+│   │       │   ├── [6.2K]  ./resources/laravel-code-generator/templates/default/layout-with-validation.stub
+│   │       │   ├── [ 301]  ./resources/laravel-code-generator/templates/default/login-partial.stub
+│   │       │   ├── [  54]  ./resources/laravel-code-generator/templates/default/migration-schema-down.stub
+│   │       │   ├── [ 140]  ./resources/laravel-code-generator/templates/default/migration-schema-up.stub
+│   │       │   ├── [ 416]  ./resources/laravel-code-generator/templates/default/migration.stub
+│   │       │   ├── [  96]  ./resources/laravel-code-generator/templates/default/model-accessor-datetime.stub
+│   │       │   ├── [  33]  ./resources/laravel-code-generator/templates/default/model-accessor-multiple-answers.stub
+│   │       │   ├── [ 213]  ./resources/laravel-code-generator/templates/default/model-accessor.stub
+│   │       │   ├── [ 121]  ./resources/laravel-code-generator/templates/default/model-mutator-datetime.stub
+│   │       │   ├── [  60]  ./resources/laravel-code-generator/templates/default/model-mutator-multiple-answers.stub
+│   │       │   ├── [ 201]  ./resources/laravel-code-generator/templates/default/model-mutator.stub
+│   │       │   ├── [ 125]  ./resources/laravel-code-generator/templates/default/model-primary-key.stub
+│   │       │   ├── [ 236]  ./resources/laravel-code-generator/templates/default/model-relation.stub
+│   │       │   ├── [ 777]  ./resources/laravel-code-generator/templates/default/model.stub
+│   │       │   ├── [ 124]  ./resources/laravel-code-generator/templates/default/model-timestamps.stub
+│   │       │   ├── [  67]  ./resources/laravel-code-generator/templates/default/routes-group.stub
+│   │       │   ├── [ 950]  ./resources/laravel-code-generator/templates/default/routes.stub
+│   │       │   ├── [1.9K]  ./resources/laravel-code-generator/templates/default/show.blade.stub
+│   │       │   ├── [  83]  ./resources/laravel-code-generator/templates/default/show.row.blade.stub
+│   │       │   └── [ 503]  ./resources/laravel-code-generator/templates/default/view-model.stub
+│   │       └── [4.0K]  ./resources/laravel-code-generator/templates/default-collective
+│   │           ├── [ 380]  ./resources/laravel-code-generator/templates/default-collective/api-controller-base-class.stub
+│   │           ├── [  98]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-destroy-api-resource.stub
+│   │           ├── [ 129]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-destroy-success-method.stub
+│   │           ├── [ 111]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-index-api-resource.stub
+│   │           ├── [1.4K]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-index-success-method.stub
+│   │           ├── [ 100]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-show-api-resource.stub
+│   │           ├── [ 128]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-show-success-method.stub
+│   │           ├── [  96]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-store-api-resource.stub
+│   │           ├── [ 127]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-store-success-method.stub
+│   │           ├── [  98]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-update-api-resource.stub
+│   │           ├── [ 129]  ./resources/laravel-code-generator/templates/default-collective/api-controller-call-update-success-method.stub
+│   │           ├── [ 310]  ./resources/laravel-code-generator/templates/default-collective/api-controller-error-response-method.stub
+│   │           ├── [ 401]  ./resources/laravel-code-generator/templates/default-collective/api-controller-get-validator.stub
+│   │           ├── [2.8K]  ./resources/laravel-code-generator/templates/default-collective/api-controller.stub
+│   │           ├── [ 457]  ./resources/laravel-code-generator/templates/default-collective/api-controller-success-response-method.stub
+│   │           ├── [ 370]  ./resources/laravel-code-generator/templates/default-collective/api-controller-transform-method.stub
+│   │           ├── [ 172]  ./resources/laravel-code-generator/templates/default-collective/api-controller-validate.stub
+│   │           ├── [ 338]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-controller.stub
+│   │           ├── [ 448]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-controller-version-based.stub
+│   │           ├── [ 120]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-field-validation-required.stub
+│   │           ├── [ 592]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-authentication.stub
+│   │           ├── [ 554]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-failed-authentication.stub
+│   │           ├── [ 519]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-failed-to-retrieve.stub
+│   │           ├── [ 535]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-failed-validation.stub
+│   │           ├── [ 158]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-fields-list-body-row-for-model.stub
+│   │           ├── [ 488]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-fields-list-body-row.stub
+│   │           ├── [1.1K]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-fields-list.stub
+│   │           ├── [ 363]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-request.stub
+│   │           ├── [ 158]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-retrieved-fields-body-row.stub
+│   │           ├── [ 271]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-retrieved-fields.stub
+│   │           ├── [ 683]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index-retrieved.stub
+│   │           ├── [8.0K]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-index.stub
+│   │           ├── [ 110]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-routes.stub
+│   │           ├── [ 807]  ./resources/laravel-code-generator/templates/default-collective/api-documentation-version-based-base-controller.stub
+│   │           ├── [1.1K]  ./resources/laravel-code-generator/templates/default-collective/api-resource-collection.stub
+│   │           ├── [1.1K]  ./resources/laravel-code-generator/templates/default-collective/api-resource.stub
+│   │           ├── [ 700]  ./resources/laravel-code-generator/templates/default-collective/api-routes.stub
+│   │           ├── [ 359]  ./resources/laravel-code-generator/templates/default-collective/controller-affirm-method.stub
+│   │           ├── [ 149]  ./resources/laravel-code-generator/templates/default-collective/controller-constructor.stub
+│   │           ├── [ 466]  ./resources/laravel-code-generator/templates/default-collective/controller-getdata-method-5.5.stub
+│   │           ├── [ 372]  ./resources/laravel-code-generator/templates/default-collective/controller-getdata-method.stub
+│   │           ├── [4.0K]  ./resources/laravel-code-generator/templates/default-collective/controller.stub
+│   │           ├── [ 589]  ./resources/laravel-code-generator/templates/default-collective/controller-upload-method-5.3.stub
+│   │           ├── [ 589]  ./resources/laravel-code-generator/templates/default-collective/controller-upload-method.stub
+│   │           ├── [1.5K]  ./resources/laravel-code-generator/templates/default-collective/create.blade.stub
+│   │           ├── [1.9K]  ./resources/laravel-code-generator/templates/default-collective/edit.blade.stub
+│   │           ├── [  23]  ./resources/laravel-code-generator/templates/default-collective/form.blade.stub
+│   │           ├── [1.0K]  ./resources/laravel-code-generator/templates/default-collective/form-file-field.blade.stub
+│   │           ├── [  88]  ./resources/laravel-code-generator/templates/default-collective/form-helper-field.blade.stub
+│   │           ├── [ 231]  ./resources/laravel-code-generator/templates/default-collective/form-input-field.blade.stub
+│   │           ├── [ 196]  ./resources/laravel-code-generator/templates/default-collective/form-input-wrapper.blade.stub
+│   │           ├── [  99]  ./resources/laravel-code-generator/templates/default-collective/form-label-field.blade.stub
+│   │           ├── [ 119]  ./resources/laravel-code-generator/templates/default-collective/form-month-field.blade.stub
+│   │           ├── [  32]  ./resources/laravel-code-generator/templates/default-collective/form-nolabel-field.blade.stub
+│   │           ├── [ 203]  ./resources/laravel-code-generator/templates/default-collective/form-password-field.blade.stub
+│   │           ├── [ 355]  ./resources/laravel-code-generator/templates/default-collective/form-pickitems-field.blade.stub
+│   │           ├── [ 319]  ./resources/laravel-code-generator/templates/default-collective/form-pickitems-inline-field.blade.stub
+│   │           ├── [ 655]  ./resources/laravel-code-generator/templates/default-collective/form-request.stub
+│   │           ├── [ 187]  ./resources/laravel-code-generator/templates/default-collective/form-selectmenu-field.blade.stub
+│   │           ├── [ 153]  ./resources/laravel-code-generator/templates/default-collective/form-selectrange-field.blade.stub
+│   │           ├── [ 214]  ./resources/laravel-code-generator/templates/default-collective/form-textarea-field.blade.stub
+│   │           ├── [3.8K]  ./resources/laravel-code-generator/templates/default-collective/index.blade.stub
+│   │           ├── [  60]  ./resources/laravel-code-generator/templates/default-collective/index.body.cell.blade.stub
+│   │           ├── [  54]  ./resources/laravel-code-generator/templates/default-collective/index.header.cell.blade.stub
+│   │           ├── [  34]  ./resources/laravel-code-generator/templates/default-collective/language.stub
+│   │           ├── [4.8K]  ./resources/laravel-code-generator/templates/default-collective/layout.stub
+│   │           ├── [6.2K]  ./resources/laravel-code-generator/templates/default-collective/layout-with-validation.stub
+│   │           ├── [ 301]  ./resources/laravel-code-generator/templates/default-collective/login-partial.stub
+│   │           ├── [  54]  ./resources/laravel-code-generator/templates/default-collective/migration-schema-down.stub
+│   │           ├── [ 140]  ./resources/laravel-code-generator/templates/default-collective/migration-schema-up.stub
+│   │           ├── [ 416]  ./resources/laravel-code-generator/templates/default-collective/migration.stub
+│   │           ├── [  64]  ./resources/laravel-code-generator/templates/default-collective/model-accessor-datetime.stub
+│   │           ├── [  33]  ./resources/laravel-code-generator/templates/default-collective/model-accessor-multiple-answers.stub
+│   │           ├── [ 213]  ./resources/laravel-code-generator/templates/default-collective/model-accessor.stub
+│   │           ├── [ 124]  ./resources/laravel-code-generator/templates/default-collective/model-mutator-datetime.stub
+│   │           ├── [  60]  ./resources/laravel-code-generator/templates/default-collective/model-mutator-multiple-answers.stub
+│   │           ├── [ 201]  ./resources/laravel-code-generator/templates/default-collective/model-mutator.stub
+│   │           ├── [ 125]  ./resources/laravel-code-generator/templates/default-collective/model-primary-key.stub
+│   │           ├── [ 236]  ./resources/laravel-code-generator/templates/default-collective/model-relation.stub
+│   │           ├── [ 802]  ./resources/laravel-code-generator/templates/default-collective/model.stub
+│   │           ├── [ 124]  ./resources/laravel-code-generator/templates/default-collective/model-timestamps.stub
+│   │           ├── [  67]  ./resources/laravel-code-generator/templates/default-collective/routes-group.stub
+│   │           ├── [ 950]  ./resources/laravel-code-generator/templates/default-collective/routes.stub
+│   │           ├── [2.0K]  ./resources/laravel-code-generator/templates/default-collective/show.blade.stub
+│   │           ├── [  83]  ./resources/laravel-code-generator/templates/default-collective/show.row.blade.stub
+│   │           └── [ 503]  ./resources/laravel-code-generator/templates/default-collective/view-model.stub
+│   ├── [4.0K]  ./resources/sass
+│   │   ├── [ 706]  ./resources/sass/app.scss
+│   │   └── [ 317]  ./resources/sass/_variables.scss
+│   └── [4.0K]  ./resources/views
+│       ├── [4.0K]  ./resources/views/auth
+│       │   ├── [ 826]  ./resources/views/auth/link-sent.blade.php
+│       │   ├── [3.7K]  ./resources/views/auth/login.blade.php
+│       │   ├── [2.3K]  ./resources/views/auth/passwordless-login.blade.php
+│       │   ├── [4.0K]  ./resources/views/auth/passwords
+│       │   │   ├── [  39]  ./resources/views/auth/passwords/confirm.blade.php
+│       │   │   ├── [  37]  ./resources/views/auth/passwords/email.blade.php
+│       │   │   └── [  37]  ./resources/views/auth/passwords/reset.blade.php
+│       │   ├── [ 102]  ./resources/views/auth/register.blade.php
+│       │   ├── [ 559]  ./resources/views/auth/signature-expired.blade.php
+│       │   └── [  28]  ./resources/views/auth/verify.blade.php
+│       ├── [4.0K]  ./resources/views/dashboard
+│       │   └── [ 916]  ./resources/views/dashboard/logs.blade.php
+│       ├── [4.0K]  ./resources/views/errors
+│       │   ├── [ 131]  ./resources/views/errors/401.blade.php
+│       │   ├── [ 153]  ./resources/views/errors/403.blade.php
+│       │   ├── [ 125]  ./resources/views/errors/404.blade.php
+│       │   ├── [ 131]  ./resources/views/errors/419.blade.php
+│       │   ├── [ 141]  ./resources/views/errors/429.blade.php
+│       │   ├── [ 467]  ./resources/views/errors/500.blade.php
+│       │   ├── [ 173]  ./resources/views/errors/503.blade.php
+│       │   ├── [8.0K]  ./resources/views/errors/illustrated-layout.blade.php
+│       │   ├── [1.0K]  ./resources/views/errors/layout.blade.php
+│       │   └── [1.1K]  ./resources/views/errors/minimal.blade.php
+│       ├── [ 439]  ./resources/views/home.blade.php
+│       ├── [4.0K]  ./resources/views/layouts
+│       │   └── [2.8K]  ./resources/views/layouts/app.blade.php
+│       ├── [4.0K]  ./resources/views/partials
+│       │   ├── [4.0K]  ./resources/views/partials/form
+│       │   │   ├── [ 457]  ./resources/views/partials/form/checkbox.blade.php
+│       │   │   ├── [ 389]  ./resources/views/partials/form/create-user.blade.php
+│       │   │   ├── [ 679]  ./resources/views/partials/form/input.blade.php
+│       │   │   ├── [ 813]  ./resources/views/partials/form/select.blade.php
+│       │   │   ├── [ 142]  ./resources/views/partials/form/submit.blade.php
+│       │   │   └── [ 633]  ./resources/views/partials/form/textarea.blade.php
+│       │   ├── [2.2K]  ./resources/views/partials/menu-item.blade.php
+│       │   ├── [1011]  ./resources/views/partials/menu-item-sub-top-nav.blade.php
+│       │   └── [1.7K]  ./resources/views/partials/menu-item-top-nav.blade.php
+│       └── [1.8K]  ./resources/views/welcome.blade.php
+├── [4.0K]  ./routes
+│   ├── [1.3K]  ./routes/api.php
+│   ├── [  92]  ./routes/api.v1.php
+│   ├── [ 488]  ./routes/channels.php
+│   ├── [ 388]  ./routes/console.php
+│   ├── [   6]  ./routes/customer.php
+│   ├── [   6]  ./routes/internal.php
+│   ├── [   6]  ./routes/local.php
+│   ├── [ 102]  ./routes/server-fetched-partials.php
+│   ├── [3.2K]  ./routes/web.php
+│   └── [   6]  ./routes/whiteglove.php
+├── [216K]  ./schemaSpy_5.0.0.jar
+├── [ 542]  ./server.php
+├── [ 326]  ./sonar-project.properties
+├── [1.1K]  ./tailwind.config.js
+├── [   0]  ./tailwind.js
+├── [4.0K]  ./tests
+│   ├── [4.0K]  ./tests/Benchmarks
+│   ├── [4.0K]  ./tests/Browser
+│   │   ├── [4.0K]  ./tests/Browser/console
+│   │   ├── [ 399]  ./tests/Browser/ExampleTest.php
+│   │   ├── [4.0K]  ./tests/Browser/Pages
+│   │   │   ├── [ 584]  ./tests/Browser/Pages/HomePage.php
+│   │   │   └── [ 335]  ./tests/Browser/Pages/Page.php
+│   │   └── [4.0K]  ./tests/Browser/screenshots
+│   ├── [ 380]  ./tests/CreatesApplication.php
+│   ├── [1.0K]  ./tests/DuskTestCase.php
+│   ├── [4.0K]  ./tests/Feature
+│   │   └── [ 289]  ./tests/Feature/ExampleTest.php
+│   ├── [4.0K]  ./tests/HttpRequests
+│   │   ├── [ 312]  ./tests/HttpRequests/api.http
+│   │   └── [4.0K]  ./tests/HttpRequests/Stubs
+│   ├── [4.0K]  ./tests/Javascript
+│   │   └── [4.0K]  ./tests/Javascript/helpers
+│   │       └── [  53]  ./tests/Javascript/helpers/setup-browser-env.js
+│   ├── [  62]  ./tests/setup.js
+│   ├── [4.0K]  ./tests/snipe-base
+│   │   └── [101K]  ./tests/snipe-base/snipe_snapshot.sql
+│   ├── [ 163]  ./tests/TestCase.php
+│   └── [4.0K]  ./tests/Unit
+│       └── [ 243]  ./tests/Unit/ExampleTest.php
+├── [5.0K]  ./tinker.config.php
+├── [ 173]  ./tsconfig.json
+├── [ 295]  ./webpack.config.js
+└── [1.7K]  ./webpack.mix.js
+
+95 directories, 475 files

@@ -1,0 +1,3 @@
+  api-docs:create-controller        Create a new controller for the api-documentation resource.
+  api-docs:create-view              Create view to render the api-documenations.
+  api-docs:scaffold                 Scaffold all necessary resources for the api-documentation.

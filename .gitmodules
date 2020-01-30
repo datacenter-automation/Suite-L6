@@ -1,0 +1,6 @@
+[submodule "vendor_internal/laravel-scout-mysql-driver"]
+	path = vendor_internal/laravel-scout-mysql-driver
+	url = https://github.com/comdexxsolutionsllc/laravel-scout-mysql-driver
+[submodule "vendor_internal/lapse"]
+	path = vendor_internal/lapse
+	url = https://github.com/datacenter-automation/lapse
