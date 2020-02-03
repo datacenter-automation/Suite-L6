@@ -68,7 +68,7 @@
     "williamcruzme/laravel-fcm": "^1.0"
   },
   "require-dev": {
-    "ahuggins/open-on-make": "^0.0.37",
+    "ahuggins/open-on-make": "^0.0.41",
     "appstract/laravel-opcache": "^3.2",
     "ayesh/composer-preload": "^0.0.8",
     "barryvdh/laravel-debugbar": "^3.2",
