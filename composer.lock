@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0b5226c79f5df9e57b8462d3db48043",
+    "content-hash": "5de3b9b09e91cd5eb7f5b06ca0c7d814",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -12173,21 +12173,25 @@
         },
         {
             "name": "mtrajano/laravel-swagger",
-            "version": "v0.2.0",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mtrajano/laravel-swagger.git",
-                "reference": "16c298fc5680116bf9de22fccb4ae41c213754f7"
+                "reference": "4b07bd85360f7d0496f96e51c115ab999621904f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mtrajano/laravel-swagger/zipball/16c298fc5680116bf9de22fccb4ae41c213754f7",
-                "reference": "16c298fc5680116bf9de22fccb4ae41c213754f7",
+                "url": "https://api.github.com/repos/mtrajano/laravel-swagger/zipball/4b07bd85360f7d0496f96e51c115ab999621904f",
+                "reference": "4b07bd85360f7d0496f96e51c115ab999621904f",
                 "shasum": ""
             },
+            "require": {
+                "phpdocumentor/reflection-docblock": "^4.3"
+            },
             "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "6.*"
+                "orchestra/testbench": "~4.0",
+                "php": ">=7.0",
+                "phpunit/phpunit": "8.3.*"
             },
             "suggest": {
                 "ext-yaml": "Required to use the YAML output option"
@@ -12219,7 +12223,7 @@
                 }
             ],
             "description": "Auto generates the swagger documentation for a laravel project",
-            "time": "2018-04-11T13:11:52+00:00"
+            "time": "2019-12-06T13:36:37+00:00"
         },
         {
             "name": "myclabs/deep-copy",
