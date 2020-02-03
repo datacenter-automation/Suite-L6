@@ -57,7 +57,7 @@
         "laravel-mix-svg-sprite": "^1.0.1",
         "laravel-mix-tailwind": "^0.1.0",
         "lodash": "^4.17.13",
-        "mocha": "^6.2.2",
+        "mocha": "^7.0.1",
         "mocha-webpack": "^1.1.0",
         "moxios": "^0.4.0",
         "node-sass": "^4.13.1",
