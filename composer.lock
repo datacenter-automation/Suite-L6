@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0b5226c79f5df9e57b8462d3db48043",
+    "content-hash": "0abe8ff8d10b3e0480683ef8a510c2a3",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -14323,16 +14323,16 @@
         },
         {
             "name": "pipe-dream/laravel",
-            "version": "v0.0.37",
+            "version": "v0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pipe-dream/laravel-create.git",
-                "reference": "2b23a82cd0a59358784cab4cc6e0553dce29f4e7"
+                "reference": "7668306d7f73f46e8dff0c7062d21df000061223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pipe-dream/laravel-create/zipball/2b23a82cd0a59358784cab4cc6e0553dce29f4e7",
-                "reference": "2b23a82cd0a59358784cab4cc6e0553dce29f4e7",
+                "url": "https://api.github.com/repos/pipe-dream/laravel-create/zipball/7668306d7f73f46e8dff0c7062d21df000061223",
+                "reference": "7668306d7f73f46e8dff0c7062d21df000061223",
                 "shasum": ""
             },
             "require": {
@@ -14342,13 +14342,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "PipeDream\\Laravel\\PipeDreamServiceProvider"
+                        "PipeDream\\LaravelCreate\\LaravelCreateServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PipeDream\\Laravel\\": "src/"
+                    "PipeDream\\LaravelCreate\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -14360,7 +14360,7 @@
                 "laravel",
                 "package"
             ],
-            "time": "2019-06-08T15:29:57+00:00"
+            "time": "2019-12-18T18:12:30+00:00"
         },
         {
             "name": "rector/rector",
