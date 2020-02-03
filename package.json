@@ -70,7 +70,7 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.25.0",
         "sass-loader": "^7.1.0",
-        "sinon": "^7.5.0",
+        "sinon": "^8.1.1",
         "ts-loader": "^6.2.1",
         "tunnel-agent": "^0.6.0",
         "typescript": "^3.7.5",
