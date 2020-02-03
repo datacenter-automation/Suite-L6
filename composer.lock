@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0b5226c79f5df9e57b8462d3db48043",
+    "content-hash": "335fade12264d680ea4f4fff32de7946",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -12127,24 +12127,24 @@
         },
         {
             "name": "mpociot/laravel-test-factory-helper",
-            "version": "v1.3",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpociot/laravel-test-factory-helper.git",
-                "reference": "cae981ca2be738e964d3f1f66bad178dcebdb9f4"
+                "reference": "4c7065ad2924744cc9ef84d25a4ac2b42c4d1213"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpociot/laravel-test-factory-helper/zipball/cae981ca2be738e964d3f1f66bad178dcebdb9f4",
-                "reference": "cae981ca2be738e964d3f1f66bad178dcebdb9f4",
+                "url": "https://api.github.com/repos/mpociot/laravel-test-factory-helper/zipball/4c7065ad2924744cc9ef84d25a4ac2b42c4d1213",
+                "reference": "4c7065ad2924744cc9ef84d25a4ac2b42c4d1213",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "~2.3",
-                "illuminate/console": "^5.5|^6.0",
-                "illuminate/filesystem": "^5.5|^6.0",
-                "illuminate/support": "^5.5|^6.0",
-                "php": ">=7.0"
+                "doctrine/dbal": "^2.9",
+                "illuminate/console": "^6.0",
+                "illuminate/filesystem": "^6.0",
+                "illuminate/support": "^6.0",
+                "php": "^7.2"
             },
             "type": "library",
             "extra": {
@@ -12169,7 +12169,7 @@
                 "laravel",
                 "tests"
             ],
-            "time": "2019-12-02T13:47:48+00:00"
+            "time": "2020-01-08T21:21:49+00:00"
         },
         {
             "name": "mtrajano/laravel-swagger",
