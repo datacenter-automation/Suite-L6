@@ -75,7 +75,7 @@
         "tunnel-agent": "^0.6.0",
         "typescript": "^3.7.5",
         "uglify-es": "^3.3.9",
-        "uglify-js": "^3.7.6",
+        "uglify-js": "^3.7.7",
         "vue-awesome": "^3.5.4",
         "vue-axios": "^2.1.5",
         "vue-i18n": "^8.15.3",
