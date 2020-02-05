@@ -12173,22 +12173,23 @@
         },
         {
             "name": "mtrajano/laravel-swagger",
-            "version": "v0.6.1",
+            "version": "v0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mtrajano/laravel-swagger.git",
-                "reference": "4b07bd85360f7d0496f96e51c115ab999621904f"
+                "reference": "45c2b0bbac7099886c3b6e0e1fbf8004b8fcae5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mtrajano/laravel-swagger/zipball/4b07bd85360f7d0496f96e51c115ab999621904f",
-                "reference": "4b07bd85360f7d0496f96e51c115ab999621904f",
+                "url": "https://api.github.com/repos/mtrajano/laravel-swagger/zipball/45c2b0bbac7099886c3b6e0e1fbf8004b8fcae5b",
+                "reference": "45c2b0bbac7099886c3b6e0e1fbf8004b8fcae5b",
                 "shasum": ""
             },
             "require": {
                 "phpdocumentor/reflection-docblock": "^4.3"
             },
             "require-dev": {
+                "laravel/passport": "^8.0",
                 "orchestra/testbench": "~4.0",
                 "php": ">=7.0",
                 "phpunit/phpunit": "8.3.*"
@@ -12223,7 +12224,7 @@
                 }
             ],
             "description": "Auto generates the swagger documentation for a laravel project",
-            "time": "2019-12-06T13:36:37+00:00"
+            "time": "2020-02-04T14:04:21+00:00"
         },
         {
             "name": "myclabs/deep-copy",
