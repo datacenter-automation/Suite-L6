@@ -101,7 +101,7 @@
         "@types/lodash": "^4.14.149",
         "collect.js": "^4.20.2",
         "dart-sass": "^1.25.0",
-        "flag-icon-css": "^3.4.5",
+        "flag-icon-css": "^3.4.6",
         "font-awesome": "^4.7.0",
         "html5shiv": "^3.7.3",
         "icheck-bootstrap": "^3.0.1",
