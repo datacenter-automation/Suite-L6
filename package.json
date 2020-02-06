@@ -96,7 +96,7 @@
     "dependencies": {
         "@babel/preset-env": "^7.8.4",
         "@cesium133/forgjs": "^1.1.11",
-        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@fortawesome/fontawesome-free": "^5.12.1",
         "@tailwindcss/custom-forms": "^0.2.1",
         "@types/lodash": "^4.14.149",
         "collect.js": "^4.20.2",
