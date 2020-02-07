@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5de3b9b09e91cd5eb7f5b06ca0c7d814",
+    "content-hash": "8876d3f1dc831ecba6fbe204ed081d61",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -8982,24 +8982,28 @@
     "packages-dev": [
         {
             "name": "ahuggins/open-on-make",
-            "version": "0.0.37",
+            "version": "0.0.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ahuggins/open-on-make.git",
-                "reference": "7a79acefb072f79e05ba8847d75169b96e724201"
+                "reference": "bea5c40897f41cb1bccd61b3609b2d17062e23f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ahuggins/open-on-make/zipball/7a79acefb072f79e05ba8847d75169b96e724201",
-                "reference": "7a79acefb072f79e05ba8847d75169b96e724201",
+                "url": "https://api.github.com/repos/ahuggins/open-on-make/zipball/bea5c40897f41cb1bccd61b3609b2d17062e23f1",
+                "reference": "bea5c40897f41cb1bccd61b3609b2d17062e23f1",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|~6.0",
                 "imliam/laravel-env-set-command": "^1.0.0",
                 "laravel/helpers": "^1.1",
-                "php": "~7.0",
+                "php": "~7.2",
                 "symfony/finder": "~3.3|^4.0|^4.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.4"
             },
             "type": "library",
             "extra": {
@@ -9025,7 +9029,7 @@
                 }
             ],
             "description": "Automatically open files in editor when Artisan make:* is executed",
-            "time": "2019-10-15T21:23:57+00:00"
+            "time": "2020-02-07T06:13:01+00:00"
         },
         {
             "name": "appstract/laravel-opcache",
