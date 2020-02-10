@@ -79,12 +79,12 @@ class AutoProvisionMonitorStates extends Collection
     /**
      * AutoProvisionMonitorStates constructor.
      *
-     * @param array $items
+     * @param array $states
      */
-    public function __construct($items = [])
+    public function __construct($states = [])
     {
-        $items = $this->states;
+        $states = $this->states;
 
-        parent::__construct($items);
+        parent::__construct($states);
     }
 }

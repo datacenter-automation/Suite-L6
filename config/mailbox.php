@@ -8,7 +8,7 @@ return [
      *
      * Supported drivers: "log", "mailgun", "sendgrid", "postmark"
      */
-    'driver' => env('MAILBOX_DRIVER', 'log'),
+    'driver' => env('MAILBOX_DRIVER', 'postmark'),
 
     /*
      * The model class to use when converting an incoming email to a message.
@@ -23,7 +23,7 @@ return [
      *
      * For example: /laravel-mailbox/sendgrid/
      */
-    'path' => '/api/mailbox',
+    'path' => '/laravel-mailbox',
 
     /*
      * The amount of days that incoming emails should be stored in your

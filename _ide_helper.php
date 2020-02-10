@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.13.1 on 2020-02-02 21:57:54.
+ * Generated for Laravel 6.14.0 on 2020-02-09 18:00:48.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2807,6 +2807,20 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Dispatch a command to its appropriate handler after the current process.
+         *
+         * @param mixed $command
+         * @param mixed $handler
+         * @return void 
+         * @static 
+         */ 
+        public static function dispatchAfterResponse($command, $handler = null)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        $instance->dispatchAfterResponse($command, $handler);
+        }
+        
+        /**
          * Set the pipes through which commands should be piped before dispatching.
          *
          * @param array $pipes
@@ -3517,7 +3531,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function lock($name, $seconds = 0, $owner = null)
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
                         return $instance->lock($name, $seconds, $owner);
         }
         
@@ -3531,7 +3545,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function restoreLock($name, $owner)
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
                         return $instance->restoreLock($name, $owner);
         }
         
@@ -3543,45 +3557,20 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function flush()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
                         return $instance->flush();
         }
         
         /**
-         * Get the Redis connection instance.
+         * Get the underlying Memcached connection.
          *
-         * @return \Illuminate\Redis\Connections\Connection 
+         * @return \Memcached 
          * @static 
          */ 
-        public static function connection()
+        public static function getMemcached()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        return $instance->connection();
-        }
-        
-        /**
-         * Set the connection name to be used.
-         *
-         * @param string $connection
-         * @return void 
-         * @static 
-         */ 
-        public static function setConnection($connection)
-        {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        $instance->setConnection($connection);
-        }
-        
-        /**
-         * Get the Redis database instance.
-         *
-         * @return \Illuminate\Contracts\Redis\Factory 
-         * @static 
-         */ 
-        public static function getRedis()
-        {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
-                        return $instance->getRedis();
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
+                        return $instance->getMemcached();
         }
         
         /**
@@ -3592,7 +3581,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getPrefix()
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
                         return $instance->getPrefix();
         }
         
@@ -3605,7 +3594,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setPrefix($prefix)
         {
-                        /** @var \Illuminate\Cache\RedisStore $instance */
+                        /** @var \Illuminate\Cache\MemcachedStore $instance */
                         $instance->setPrefix($prefix);
         }
          
@@ -5263,6 +5252,45 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Events\Dispatcher::macro($name, $macro);
+        }
+        
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Events\Dispatcher::mixin($mixin, $replace);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Events\Dispatcher::hasMacro($name);
+        }
+        
+        /**
          * Assert if an event was dispatched based on a truth-test callback.
          *
          * @param string $event
@@ -6685,7 +6713,7 @@ namespace Illuminate\Support\Facades {
          * Get a log channel instance.
          *
          * @param string|null $channel
-         * @return mixed 
+         * @return \Psr\Log\LoggerInterface 
          * @static 
          */ 
         public static function channel($channel = null)
@@ -6698,7 +6726,7 @@ namespace Illuminate\Support\Facades {
          * Get a log driver instance.
          *
          * @param string|null $driver
-         * @return mixed 
+         * @return \Psr\Log\LoggerInterface 
          * @static 
          */ 
         public static function driver($driver = null)
@@ -7940,6 +7968,20 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Assert if a job was pushed with an empty chain based on a truth-test callback.
+         *
+         * @param string $job
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertPushedWithoutChain($job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertPushedWithoutChain($job, $callback);
+        }
+        
+        /**
          * Determine if a job was pushed based on a truth-test callback.
          *
          * @param string $job
@@ -8148,83 +8190,153 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Migrate the delayed jobs that are ready to the regular queue.
+         * 
          *
-         * @param string $from
-         * @param string $to
-         * @return array 
          * @static 
          */ 
-        public static function migrateExpiredJobs($from, $to)
+        public static function laterRaw($delay, $payload, $queue = null, $attempts = 0)
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        return $instance->migrateExpiredJobs($from, $to);
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->laterRaw($delay, $payload, $queue, $attempts);
         }
         
         /**
-         * Delete a reserved job from the queue.
+         * 
          *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\RedisJob $job
-         * @return void 
-         * @static 
-         */ 
-        public static function deleteReserved($queue, $job)
-        {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        $instance->deleteReserved($queue, $job);
-        }
-        
-        /**
-         * Delete a reserved job from the reserved queue and release it.
-         *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\RedisJob $job
-         * @param int $delay
-         * @return void 
-         * @static 
-         */ 
-        public static function deleteAndRelease($queue, $job, $delay)
-        {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        $instance->deleteAndRelease($queue, $job, $delay);
-        }
-        
-        /**
-         * Get the queue or return the default.
-         *
-         * @param string|null $queue
-         * @return string 
-         * @static 
-         */ 
-        public static function getQueue($queue)
-        {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        return $instance->getQueue($queue);
-        }
-        
-        /**
-         * Get the connection for the queue.
-         *
-         * @return \Illuminate\Redis\Connections\Connection 
          * @static 
          */ 
         public static function getConnection()
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
                         return $instance->getConnection();
         }
         
         /**
-         * Get the underlying Redis instance.
+         * 
          *
-         * @return \Illuminate\Contracts\Redis\Factory 
          * @static 
          */ 
-        public static function getRedis()
+        public static function getChannel()
         {
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
-                        return $instance->getRedis();
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->getChannel();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getQueue($queue = null)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->getQueue($queue);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $exchange
+         * @return bool 
+         * @throws AMQPProtocolChannelException
+         * @static 
+         */ 
+        public static function isExchangeExists($exchange)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->isExchangeExists($exchange);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function declareExchange($name, $type = 'direct', $durable = true, $autoDelete = false)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->declareExchange($name, $type, $durable, $autoDelete);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $name
+         * @return bool 
+         * @throws AMQPProtocolChannelException
+         * @static 
+         */ 
+        public static function isQueueExists($name = null)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->isQueueExists($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function declareQueue($name, $durable = true, $autoDelete = false, $arguments = [])
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->declareQueue($name, $durable, $autoDelete, $arguments);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function bindQueue($queue, $exchange, $routingKey = '')
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->bindQueue($queue, $exchange, $routingKey);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function purge($queue = null)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->purge($queue);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function ack($job)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->ack($job);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function reject($job, $requeue = false)
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->reject($job, $requeue);
+        }
+        
+        /**
+         * 
+         *
+         * @throws Exception
+         * @static 
+         */ 
+        public static function close()
+        {
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
+                        return $instance->close();
         }
         
         /**
@@ -8237,7 +8349,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobRetryDelay($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
                         return $instance->getJobRetryDelay($job);
         }
         
@@ -8251,7 +8363,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobExpiration($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
                         return $instance->getJobExpiration($job);
         }
         
@@ -8265,7 +8377,7 @@ namespace Illuminate\Support\Facades {
         public static function createPayloadUsing($callback)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        \Illuminate\Queue\RedisQueue::createPayloadUsing($callback);
+                        \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue::createPayloadUsing($callback);
         }
         
         /**
@@ -8278,7 +8390,7 @@ namespace Illuminate\Support\Facades {
         public static function setContainer($container)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-                        /** @var \Illuminate\Queue\RedisQueue $instance */
+                        /** @var \VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue $instance */
                         $instance->setContainer($container);
         }
          
@@ -18679,6 +18791,17 @@ namespace Livewire {
         {
                         /** @var \Livewire\LivewireManager $instance */
                         return $instance->listen($event, $callback);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function isOnVapor()
+        {
+                        /** @var \Livewire\LivewireManager $instance */
+                        return $instance->isOnVapor();
         }
         
         /**

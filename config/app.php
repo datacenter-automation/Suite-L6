@@ -206,9 +206,9 @@ return [
     | as the default, or current.
      */
 
-    'api_version' => '1',
+    'api_version' => env('API_VERSION', null),
 
-    'api_latest' => '1',
+    'api_latest' => env('API_LATEST', null),
 
     /*
     |--------------------------------------------------------------------------

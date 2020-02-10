@@ -31,7 +31,7 @@ class ProcessMenu
     /**
      * @var string
      */
-    protected static string $regex = 'api|auth0|broadcasting|_debugbar|_dusk|dashboard|devices|docs|graphql|horizon|_ignition|impersonate-ui|livewire|login|logout|metrics|oauth|opcache-api|password|pipe-dream|register|stripe|telescope|testing|tinker';
+    protected static string $regex = 'api|auth0|broadcasting|_debugbar|_dusk|dashboard|devices|docs|graphql|horizon|_ignition|impersonate-ui|livewire|login|logout|metrics|oauth|opcache-api|partials|password|pipe-dream|laravel-mailbox|register|stripe|telescope|testing|tinker';
 
     /**
      * @return array

@@ -4,6 +4,7 @@
 │   │   └── [ 419]  ./app/Builder/MyBuilder.php
 │   ├── [4.0K]  ./app/Console
 │   │   ├── [4.0K]  ./app/Console/Commands
+│   │   │   ├── [ 885]  ./app/Console/Commands/ClearIncidentFiles.php
 │   │   │   ├── [ 931]  ./app/Console/Commands/ClearProjectFiles.php
 │   │   │   ├── [1.4K]  ./app/Console/Commands/CloseInactiveGithubIssuesAndPRs.php
 │   │   │   ├── [1.5K]  ./app/Console/Commands/MakePHPDevelopmentReports.php
@@ -11,7 +12,8 @@
 │   │   │   └── [ 712]  ./app/Console/Commands/TestProgressBar.php
 │   │   └── [ 644]  ./app/Console/Kernel.php
 │   ├── [4.0K]  ./app/Contracts
-│   │   └── [ 518]  ./app/Contracts/HttpClient.php
+│   │   ├── [ 518]  ./app/Contracts/HttpClient.php
+│   │   └── [1.2K]  ./app/Contracts/SearchContract.php
 │   ├── [4.0K]  ./app/EloquentFilters
 │   ├── [4.0K]  ./app/Enums
 │   │   └── [2.0K]  ./app/Enums/AutoProvisionMonitorStates.php
@@ -23,6 +25,7 @@
 │   │   │   ├── [1.5K]  ./app/Exceptions/Api/BaseException.php
 │   │   │   └── [ 163]  ./app/Exceptions/Api/ResourceNotFoundException.php
 │   │   └── [3.7K]  ./app/Exceptions/Handler.php
+│   ├── [4.0K]  ./app/Filters
 │   ├── [4.0K]  ./app/General
 │   │   ├── [1.1K]  ./app/General/BuildBaseMenu.php
 │   │   ├── [ 272]  ./app/General/ClickTracker.php
@@ -33,6 +36,7 @@
 │   ├── [4.0K]  ./app/Helpers
 │   │   └── [ 912]  ./app/Helpers/Logger.php
 │   ├── [4.0K]  ./app/Http
+│   │   ├── [4.0K]  ./app/Http/Clients
 │   │   ├── [4.0K]  ./app/Http/Controllers
 │   │   │   ├── [4.0K]  ./app/Http/Controllers/API
 │   │   │   │   ├── [ 231]  ./app/Http/Controllers/API/ApiController.php
@@ -91,6 +95,7 @@
 │   ├── [4.0K]  ./app/Macros
 │   │   └── [ 373]  ./app/Macros/Request.php
 │   ├── [4.0K]  ./app/Mailboxes
+│   │   └── [ 184]  ./app/Mailboxes/PostmarkTestMailbox.php
 │   ├── [4.0K]  ./app/MailProcessing
 │   │   └── [ 663]  ./app/MailProcessing/DefaultHook.php
 │   ├── [4.0K]  ./app/Models
@@ -116,7 +121,7 @@
 │   │   ├── [ 380]  ./app/Providers/BroadcastServiceProvider.php
 │   │   ├── [1.1K]  ./app/Providers/EventServiceProvider.php
 │   │   ├── [ 616]  ./app/Providers/GitHubServiceProvider.php
-│   │   ├── [ 375]  ./app/Providers/MailboxServiceProvider.php
+│   │   ├── [ 430]  ./app/Providers/MailboxServiceProvider.php
 │   │   ├── [3.2K]  ./app/Providers/MenuServiceProvider.php
 │   │   ├── [2.5K]  ./app/Providers/OtherValidationRulesProvider.php
 │   │   └── [4.6K]  ./app/Providers/RouteServiceProvider.php
@@ -145,12 +150,14 @@
 ├── [4.0K]  ./bin
 │   ├── [4.0K]  ./bin/Unix
 │   │   ├── [ 170]  ./bin/Unix/start-selenium2.sh
+│   │   ├── [ 328]  ./bin/Unix/supervisor-setup.sh
 │   │   ├── [ 474]  ./bin/Unix/sync-internal-vendor-directory.sh
+│   │   ├── [  59]  ./bin/Unix/tinx.sh
 │   │   └── [ 700]  ./bin/Unix/update-framework.sh
 │   └── [4.0K]  ./bin/Windows
 │       ├── [ 183]  ./bin/Windows/add-console-aliases.bat
 │       └── [  76]  ./bin/Windows/composer.bat
-├── [5.4K]  ./composer.json
+├── [5.5K]  ./composer.json
 ├── [2.3K]  ./composer.old.json
 ├── [4.0K]  ./config
 │   ├── [ 10K]  ./config/adminlte.php
@@ -162,7 +169,7 @@
 │   ├── [3.0K]  ./config/cache.php
 │   ├── [ 596]  ./config/cors.php
 │   ├── [5.7K]  ./config/database.php
-│   ├── [ 491]  ./config/datacenter-automation-suite.php
+│   ├── [ 503]  ./config/datacenter-automation-suite.php
 │   ├── [8.0K]  ./config/debugbar.php
 │   ├── [ 165]  ./config/debug-server.php
 │   ├── [ 359]  ./config/eloquent-builder.php
@@ -183,7 +190,7 @@
 │   ├── [1.8K]  ./config/laravel-code-generator.php
 │   ├── [1.9K]  ./config/laravel-form-builder.php
 │   ├── [1.2K]  ./config/laravel-impersonate-ui.php
-│   ├── [ 969]  ./config/laravel-swagger.php
+│   ├── [ 980]  ./config/laravel-swagger.php
 │   ├── [1.4K]  ./config/laroute.php
 │   ├── [ 764]  ./config/loading.php
 │   ├── [3.0K]  ./config/logging.php
@@ -193,7 +200,7 @@
 │   ├── [ 584]  ./config/opcache.php
 │   ├── [ 247]  ./config/open-on-make.php
 │   ├── [4.3K]  ./config/permission.php
-│   ├── [2.7K]  ./config/queue.php
+│   ├── [3.9K]  ./config/queue.php
 │   ├── [3.3K]  ./config/scout.php
 │   ├── [1021]  ./config/services.php
 │   ├── [6.8K]  ./config/session.php
@@ -260,7 +267,7 @@
 ├── [1.5K]  ./phpunit.xml
 ├── [4.0K]  ./public
 │   ├── [4.0K]  ./public/css
-│   │   └── [1.7M]  ./public/css/app.css
+│   │   └── [2.0M]  ./public/css/app.css
 │   ├── [   0]  ./public/favicon.ico
 │   ├── [4.0K]  ./public/fonts
 │   │   ├── [132K]  ./public/fonts/FontAwesome.otf
@@ -542,6 +549,8 @@
 ├── [216K]  ./schemaSpy_5.0.0.jar
 ├── [ 542]  ./server.php
 ├── [ 326]  ./sonar-project.properties
+├── [4.0K]  ./supervisor_configurations
+│   └── [ 357]  ./supervisor_configurations/laravel-queue-worker.conf
 ├── [1.1K]  ./tailwind.config.js
 ├── [   0]  ./tailwind.js
 ├── [4.0K]  ./tests
@@ -574,4 +583,4 @@
 ├── [ 295]  ./webpack.config.js
 └── [1.7K]  ./webpack.mix.js
 
-96 directories, 478 files
+99 directories, 484 files

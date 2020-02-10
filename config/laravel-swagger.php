@@ -15,7 +15,7 @@ return [
 
     'description' => '',
 
-    'appVersion' => '1.0.0',
+    'appVersion' => env('APP_VERSION'),
 
     'host' => env('APP_URL'),
 
