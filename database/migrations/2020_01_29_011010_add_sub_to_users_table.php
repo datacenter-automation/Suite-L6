@@ -15,7 +15,7 @@ class AddSubToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('sub')->unique();
+            $table->string('sub')->unique()->nullable();
         });
     }
 
