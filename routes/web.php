@@ -11,6 +11,10 @@
 |
 */
 
+use App\Mail\TestMail;
+use Sametsahindogan\ResponseObjectCreator\ErrorResult;
+use Sametsahindogan\ResponseObjectCreator\ErrorService\ErrorBuilder;
+use Sametsahindogan\ResponseObjectCreator\SuccessResult;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use williamcruzme\FCM\Facades\Device;
 
@@ -68,3 +72,4 @@ Route::prefix('/dashboard')->middleware(['auth', 'auth.lock', 'auth.log', 'activ
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/logs', 'LogController@show')->name('logs');
 });
+
