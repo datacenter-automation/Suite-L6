@@ -29,10 +29,10 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereHeaders($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereMethod($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($field, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($column, $states)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereOriginIpAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereParameter($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($field, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($column, $states)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereUser($value)
  * @mixin \Eloquent

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /**
  * @see https://medium.com/@sixlive/abstracting-request-keys-78a1c0df0997
  */

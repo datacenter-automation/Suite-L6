@@ -1,3 +1,10 @@
+/**
+ * @project        Datacenter Automation Suite
+ * @author         A. Renner
+ * @release        0.0.1-alpha
+ *
+ */
+
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);/*!
  * Font Awesome Free 5.12.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -42010,6 +42017,271 @@ video {
   border-color: #63b3ed;
 }
 
+.tw-c-gap, .tw-c-gap-padding{
+  --gap-x: 0px;
+  --gap-y: 0px;
+  --gap-x-half: calc(var(--gap-x) / 2);
+  --gap-x-half-negative: calc(var(--gap-x-half) * -1);
+  --gap-y-half: calc(var(--gap-y) / 2);
+  --gap-y-half-negative: calc(var(--gap-y-half) * -1);
+  margin: var(--gap-y-half-negative) var(--gap-x-half-negative);
+}
+
+.tw-c-gap > *{
+  margin: var(--gap-y-half) var(--gap-x-half);
+}
+
+.tw-c-gap-padding > *{
+  padding: var(--gap-y-half) var(--gap-x-half);
+}
+
+.tw-c-gap-0{
+  --gap-x: 0;
+  --gap-y: 0;
+}
+
+.tw-c-gap-1{
+  --gap-x: 0.25rem;
+  --gap-y: 0.25rem;
+}
+
+.tw-c-gap-2{
+  --gap-x: 0.5rem;
+  --gap-y: 0.5rem;
+}
+
+.tw-c-gap-3{
+  --gap-x: 0.75rem;
+  --gap-y: 0.75rem;
+}
+
+.tw-c-gap-4{
+  --gap-x: 1rem;
+  --gap-y: 1rem;
+}
+
+.tw-c-gap-5{
+  --gap-x: 1.25rem;
+  --gap-y: 1.25rem;
+}
+
+.tw-c-gap-6{
+  --gap-x: 1.5rem;
+  --gap-y: 1.5rem;
+}
+
+.tw-c-gap-8{
+  --gap-x: 2rem;
+  --gap-y: 2rem;
+}
+
+.tw-c-gap-10{
+  --gap-x: 2.5rem;
+  --gap-y: 2.5rem;
+}
+
+.tw-c-gap-12{
+  --gap-x: 3rem;
+  --gap-y: 3rem;
+}
+
+.tw-c-gap-16{
+  --gap-x: 4rem;
+  --gap-y: 4rem;
+}
+
+.tw-c-gap-20{
+  --gap-x: 5rem;
+  --gap-y: 5rem;
+}
+
+.tw-c-gap-24{
+  --gap-x: 6rem;
+  --gap-y: 6rem;
+}
+
+.tw-c-gap-32{
+  --gap-x: 8rem;
+  --gap-y: 8rem;
+}
+
+.tw-c-gap-40{
+  --gap-x: 10rem;
+  --gap-y: 10rem;
+}
+
+.tw-c-gap-48{
+  --gap-x: 12rem;
+  --gap-y: 12rem;
+}
+
+.tw-c-gap-56{
+  --gap-x: 14rem;
+  --gap-y: 14rem;
+}
+
+.tw-c-gap-64{
+  --gap-x: 16rem;
+  --gap-y: 16rem;
+}
+
+.tw-c-gap-px{
+  --gap-x: 1px;
+  --gap-y: 1px;
+}
+
+.tw-c-gap-x-0{
+  --gap-x: 0;
+}
+
+.tw-c-gap-y-0{
+  --gap-y: 0;
+}
+
+.tw-c-gap-x-1{
+  --gap-x: 0.25rem;
+}
+
+.tw-c-gap-y-1{
+  --gap-y: 0.25rem;
+}
+
+.tw-c-gap-x-2{
+  --gap-x: 0.5rem;
+}
+
+.tw-c-gap-y-2{
+  --gap-y: 0.5rem;
+}
+
+.tw-c-gap-x-3{
+  --gap-x: 0.75rem;
+}
+
+.tw-c-gap-y-3{
+  --gap-y: 0.75rem;
+}
+
+.tw-c-gap-x-4{
+  --gap-x: 1rem;
+}
+
+.tw-c-gap-y-4{
+  --gap-y: 1rem;
+}
+
+.tw-c-gap-x-5{
+  --gap-x: 1.25rem;
+}
+
+.tw-c-gap-y-5{
+  --gap-y: 1.25rem;
+}
+
+.tw-c-gap-x-6{
+  --gap-x: 1.5rem;
+}
+
+.tw-c-gap-y-6{
+  --gap-y: 1.5rem;
+}
+
+.tw-c-gap-x-8{
+  --gap-x: 2rem;
+}
+
+.tw-c-gap-y-8{
+  --gap-y: 2rem;
+}
+
+.tw-c-gap-x-10{
+  --gap-x: 2.5rem;
+}
+
+.tw-c-gap-y-10{
+  --gap-y: 2.5rem;
+}
+
+.tw-c-gap-x-12{
+  --gap-x: 3rem;
+}
+
+.tw-c-gap-y-12{
+  --gap-y: 3rem;
+}
+
+.tw-c-gap-x-16{
+  --gap-x: 4rem;
+}
+
+.tw-c-gap-y-16{
+  --gap-y: 4rem;
+}
+
+.tw-c-gap-x-20{
+  --gap-x: 5rem;
+}
+
+.tw-c-gap-y-20{
+  --gap-y: 5rem;
+}
+
+.tw-c-gap-x-24{
+  --gap-x: 6rem;
+}
+
+.tw-c-gap-y-24{
+  --gap-y: 6rem;
+}
+
+.tw-c-gap-x-32{
+  --gap-x: 8rem;
+}
+
+.tw-c-gap-y-32{
+  --gap-y: 8rem;
+}
+
+.tw-c-gap-x-40{
+  --gap-x: 10rem;
+}
+
+.tw-c-gap-y-40{
+  --gap-y: 10rem;
+}
+
+.tw-c-gap-x-48{
+  --gap-x: 12rem;
+}
+
+.tw-c-gap-y-48{
+  --gap-y: 12rem;
+}
+
+.tw-c-gap-x-56{
+  --gap-x: 14rem;
+}
+
+.tw-c-gap-y-56{
+  --gap-y: 14rem;
+}
+
+.tw-c-gap-x-64{
+  --gap-x: 16rem;
+}
+
+.tw-c-gap-y-64{
+  --gap-y: 16rem;
+}
+
+.tw-c-gap-x-px{
+  --gap-x: 1px;
+}
+
+.tw-c-gap-y-px{
+  --gap-y: 1px;
+}
+
 .tw-sr-only{
   position: absolute;
   width: 1px;
@@ -55457,6 +55729,253 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:tw-c-gap-0{
+    --gap-x: 0;
+    --gap-y: 0;
+  }
+
+  .sm\:tw-c-gap-1{
+    --gap-x: 0.25rem;
+    --gap-y: 0.25rem;
+  }
+
+  .sm\:tw-c-gap-2{
+    --gap-x: 0.5rem;
+    --gap-y: 0.5rem;
+  }
+
+  .sm\:tw-c-gap-3{
+    --gap-x: 0.75rem;
+    --gap-y: 0.75rem;
+  }
+
+  .sm\:tw-c-gap-4{
+    --gap-x: 1rem;
+    --gap-y: 1rem;
+  }
+
+  .sm\:tw-c-gap-5{
+    --gap-x: 1.25rem;
+    --gap-y: 1.25rem;
+  }
+
+  .sm\:tw-c-gap-6{
+    --gap-x: 1.5rem;
+    --gap-y: 1.5rem;
+  }
+
+  .sm\:tw-c-gap-8{
+    --gap-x: 2rem;
+    --gap-y: 2rem;
+  }
+
+  .sm\:tw-c-gap-10{
+    --gap-x: 2.5rem;
+    --gap-y: 2.5rem;
+  }
+
+  .sm\:tw-c-gap-12{
+    --gap-x: 3rem;
+    --gap-y: 3rem;
+  }
+
+  .sm\:tw-c-gap-16{
+    --gap-x: 4rem;
+    --gap-y: 4rem;
+  }
+
+  .sm\:tw-c-gap-20{
+    --gap-x: 5rem;
+    --gap-y: 5rem;
+  }
+
+  .sm\:tw-c-gap-24{
+    --gap-x: 6rem;
+    --gap-y: 6rem;
+  }
+
+  .sm\:tw-c-gap-32{
+    --gap-x: 8rem;
+    --gap-y: 8rem;
+  }
+
+  .sm\:tw-c-gap-40{
+    --gap-x: 10rem;
+    --gap-y: 10rem;
+  }
+
+  .sm\:tw-c-gap-48{
+    --gap-x: 12rem;
+    --gap-y: 12rem;
+  }
+
+  .sm\:tw-c-gap-56{
+    --gap-x: 14rem;
+    --gap-y: 14rem;
+  }
+
+  .sm\:tw-c-gap-64{
+    --gap-x: 16rem;
+    --gap-y: 16rem;
+  }
+
+  .sm\:tw-c-gap-px{
+    --gap-x: 1px;
+    --gap-y: 1px;
+  }
+
+  .sm\:tw-c-gap-x-0{
+    --gap-x: 0;
+  }
+
+  .sm\:tw-c-gap-y-0{
+    --gap-y: 0;
+  }
+
+  .sm\:tw-c-gap-x-1{
+    --gap-x: 0.25rem;
+  }
+
+  .sm\:tw-c-gap-y-1{
+    --gap-y: 0.25rem;
+  }
+
+  .sm\:tw-c-gap-x-2{
+    --gap-x: 0.5rem;
+  }
+
+  .sm\:tw-c-gap-y-2{
+    --gap-y: 0.5rem;
+  }
+
+  .sm\:tw-c-gap-x-3{
+    --gap-x: 0.75rem;
+  }
+
+  .sm\:tw-c-gap-y-3{
+    --gap-y: 0.75rem;
+  }
+
+  .sm\:tw-c-gap-x-4{
+    --gap-x: 1rem;
+  }
+
+  .sm\:tw-c-gap-y-4{
+    --gap-y: 1rem;
+  }
+
+  .sm\:tw-c-gap-x-5{
+    --gap-x: 1.25rem;
+  }
+
+  .sm\:tw-c-gap-y-5{
+    --gap-y: 1.25rem;
+  }
+
+  .sm\:tw-c-gap-x-6{
+    --gap-x: 1.5rem;
+  }
+
+  .sm\:tw-c-gap-y-6{
+    --gap-y: 1.5rem;
+  }
+
+  .sm\:tw-c-gap-x-8{
+    --gap-x: 2rem;
+  }
+
+  .sm\:tw-c-gap-y-8{
+    --gap-y: 2rem;
+  }
+
+  .sm\:tw-c-gap-x-10{
+    --gap-x: 2.5rem;
+  }
+
+  .sm\:tw-c-gap-y-10{
+    --gap-y: 2.5rem;
+  }
+
+  .sm\:tw-c-gap-x-12{
+    --gap-x: 3rem;
+  }
+
+  .sm\:tw-c-gap-y-12{
+    --gap-y: 3rem;
+  }
+
+  .sm\:tw-c-gap-x-16{
+    --gap-x: 4rem;
+  }
+
+  .sm\:tw-c-gap-y-16{
+    --gap-y: 4rem;
+  }
+
+  .sm\:tw-c-gap-x-20{
+    --gap-x: 5rem;
+  }
+
+  .sm\:tw-c-gap-y-20{
+    --gap-y: 5rem;
+  }
+
+  .sm\:tw-c-gap-x-24{
+    --gap-x: 6rem;
+  }
+
+  .sm\:tw-c-gap-y-24{
+    --gap-y: 6rem;
+  }
+
+  .sm\:tw-c-gap-x-32{
+    --gap-x: 8rem;
+  }
+
+  .sm\:tw-c-gap-y-32{
+    --gap-y: 8rem;
+  }
+
+  .sm\:tw-c-gap-x-40{
+    --gap-x: 10rem;
+  }
+
+  .sm\:tw-c-gap-y-40{
+    --gap-y: 10rem;
+  }
+
+  .sm\:tw-c-gap-x-48{
+    --gap-x: 12rem;
+  }
+
+  .sm\:tw-c-gap-y-48{
+    --gap-y: 12rem;
+  }
+
+  .sm\:tw-c-gap-x-56{
+    --gap-x: 14rem;
+  }
+
+  .sm\:tw-c-gap-y-56{
+    --gap-y: 14rem;
+  }
+
+  .sm\:tw-c-gap-x-64{
+    --gap-x: 16rem;
+  }
+
+  .sm\:tw-c-gap-y-64{
+    --gap-y: 16rem;
+  }
+
+  .sm\:tw-c-gap-x-px{
+    --gap-x: 1px;
+  }
+
+  .sm\:tw-c-gap-y-px{
+    --gap-y: 1px;
+  }
+
   .sm\:tw-sr-only{
     position: absolute;
     width: 1px;
@@ -68876,6 +69395,253 @@ video {
 }
 
 @media (min-width: 768px){
+  .md\:tw-c-gap-0{
+    --gap-x: 0;
+    --gap-y: 0;
+  }
+
+  .md\:tw-c-gap-1{
+    --gap-x: 0.25rem;
+    --gap-y: 0.25rem;
+  }
+
+  .md\:tw-c-gap-2{
+    --gap-x: 0.5rem;
+    --gap-y: 0.5rem;
+  }
+
+  .md\:tw-c-gap-3{
+    --gap-x: 0.75rem;
+    --gap-y: 0.75rem;
+  }
+
+  .md\:tw-c-gap-4{
+    --gap-x: 1rem;
+    --gap-y: 1rem;
+  }
+
+  .md\:tw-c-gap-5{
+    --gap-x: 1.25rem;
+    --gap-y: 1.25rem;
+  }
+
+  .md\:tw-c-gap-6{
+    --gap-x: 1.5rem;
+    --gap-y: 1.5rem;
+  }
+
+  .md\:tw-c-gap-8{
+    --gap-x: 2rem;
+    --gap-y: 2rem;
+  }
+
+  .md\:tw-c-gap-10{
+    --gap-x: 2.5rem;
+    --gap-y: 2.5rem;
+  }
+
+  .md\:tw-c-gap-12{
+    --gap-x: 3rem;
+    --gap-y: 3rem;
+  }
+
+  .md\:tw-c-gap-16{
+    --gap-x: 4rem;
+    --gap-y: 4rem;
+  }
+
+  .md\:tw-c-gap-20{
+    --gap-x: 5rem;
+    --gap-y: 5rem;
+  }
+
+  .md\:tw-c-gap-24{
+    --gap-x: 6rem;
+    --gap-y: 6rem;
+  }
+
+  .md\:tw-c-gap-32{
+    --gap-x: 8rem;
+    --gap-y: 8rem;
+  }
+
+  .md\:tw-c-gap-40{
+    --gap-x: 10rem;
+    --gap-y: 10rem;
+  }
+
+  .md\:tw-c-gap-48{
+    --gap-x: 12rem;
+    --gap-y: 12rem;
+  }
+
+  .md\:tw-c-gap-56{
+    --gap-x: 14rem;
+    --gap-y: 14rem;
+  }
+
+  .md\:tw-c-gap-64{
+    --gap-x: 16rem;
+    --gap-y: 16rem;
+  }
+
+  .md\:tw-c-gap-px{
+    --gap-x: 1px;
+    --gap-y: 1px;
+  }
+
+  .md\:tw-c-gap-x-0{
+    --gap-x: 0;
+  }
+
+  .md\:tw-c-gap-y-0{
+    --gap-y: 0;
+  }
+
+  .md\:tw-c-gap-x-1{
+    --gap-x: 0.25rem;
+  }
+
+  .md\:tw-c-gap-y-1{
+    --gap-y: 0.25rem;
+  }
+
+  .md\:tw-c-gap-x-2{
+    --gap-x: 0.5rem;
+  }
+
+  .md\:tw-c-gap-y-2{
+    --gap-y: 0.5rem;
+  }
+
+  .md\:tw-c-gap-x-3{
+    --gap-x: 0.75rem;
+  }
+
+  .md\:tw-c-gap-y-3{
+    --gap-y: 0.75rem;
+  }
+
+  .md\:tw-c-gap-x-4{
+    --gap-x: 1rem;
+  }
+
+  .md\:tw-c-gap-y-4{
+    --gap-y: 1rem;
+  }
+
+  .md\:tw-c-gap-x-5{
+    --gap-x: 1.25rem;
+  }
+
+  .md\:tw-c-gap-y-5{
+    --gap-y: 1.25rem;
+  }
+
+  .md\:tw-c-gap-x-6{
+    --gap-x: 1.5rem;
+  }
+
+  .md\:tw-c-gap-y-6{
+    --gap-y: 1.5rem;
+  }
+
+  .md\:tw-c-gap-x-8{
+    --gap-x: 2rem;
+  }
+
+  .md\:tw-c-gap-y-8{
+    --gap-y: 2rem;
+  }
+
+  .md\:tw-c-gap-x-10{
+    --gap-x: 2.5rem;
+  }
+
+  .md\:tw-c-gap-y-10{
+    --gap-y: 2.5rem;
+  }
+
+  .md\:tw-c-gap-x-12{
+    --gap-x: 3rem;
+  }
+
+  .md\:tw-c-gap-y-12{
+    --gap-y: 3rem;
+  }
+
+  .md\:tw-c-gap-x-16{
+    --gap-x: 4rem;
+  }
+
+  .md\:tw-c-gap-y-16{
+    --gap-y: 4rem;
+  }
+
+  .md\:tw-c-gap-x-20{
+    --gap-x: 5rem;
+  }
+
+  .md\:tw-c-gap-y-20{
+    --gap-y: 5rem;
+  }
+
+  .md\:tw-c-gap-x-24{
+    --gap-x: 6rem;
+  }
+
+  .md\:tw-c-gap-y-24{
+    --gap-y: 6rem;
+  }
+
+  .md\:tw-c-gap-x-32{
+    --gap-x: 8rem;
+  }
+
+  .md\:tw-c-gap-y-32{
+    --gap-y: 8rem;
+  }
+
+  .md\:tw-c-gap-x-40{
+    --gap-x: 10rem;
+  }
+
+  .md\:tw-c-gap-y-40{
+    --gap-y: 10rem;
+  }
+
+  .md\:tw-c-gap-x-48{
+    --gap-x: 12rem;
+  }
+
+  .md\:tw-c-gap-y-48{
+    --gap-y: 12rem;
+  }
+
+  .md\:tw-c-gap-x-56{
+    --gap-x: 14rem;
+  }
+
+  .md\:tw-c-gap-y-56{
+    --gap-y: 14rem;
+  }
+
+  .md\:tw-c-gap-x-64{
+    --gap-x: 16rem;
+  }
+
+  .md\:tw-c-gap-y-64{
+    --gap-y: 16rem;
+  }
+
+  .md\:tw-c-gap-x-px{
+    --gap-x: 1px;
+  }
+
+  .md\:tw-c-gap-y-px{
+    --gap-y: 1px;
+  }
+
   .md\:tw-sr-only{
     position: absolute;
     width: 1px;
@@ -82295,6 +83061,253 @@ video {
 }
 
 @media (min-width: 1024px){
+  .lg\:tw-c-gap-0{
+    --gap-x: 0;
+    --gap-y: 0;
+  }
+
+  .lg\:tw-c-gap-1{
+    --gap-x: 0.25rem;
+    --gap-y: 0.25rem;
+  }
+
+  .lg\:tw-c-gap-2{
+    --gap-x: 0.5rem;
+    --gap-y: 0.5rem;
+  }
+
+  .lg\:tw-c-gap-3{
+    --gap-x: 0.75rem;
+    --gap-y: 0.75rem;
+  }
+
+  .lg\:tw-c-gap-4{
+    --gap-x: 1rem;
+    --gap-y: 1rem;
+  }
+
+  .lg\:tw-c-gap-5{
+    --gap-x: 1.25rem;
+    --gap-y: 1.25rem;
+  }
+
+  .lg\:tw-c-gap-6{
+    --gap-x: 1.5rem;
+    --gap-y: 1.5rem;
+  }
+
+  .lg\:tw-c-gap-8{
+    --gap-x: 2rem;
+    --gap-y: 2rem;
+  }
+
+  .lg\:tw-c-gap-10{
+    --gap-x: 2.5rem;
+    --gap-y: 2.5rem;
+  }
+
+  .lg\:tw-c-gap-12{
+    --gap-x: 3rem;
+    --gap-y: 3rem;
+  }
+
+  .lg\:tw-c-gap-16{
+    --gap-x: 4rem;
+    --gap-y: 4rem;
+  }
+
+  .lg\:tw-c-gap-20{
+    --gap-x: 5rem;
+    --gap-y: 5rem;
+  }
+
+  .lg\:tw-c-gap-24{
+    --gap-x: 6rem;
+    --gap-y: 6rem;
+  }
+
+  .lg\:tw-c-gap-32{
+    --gap-x: 8rem;
+    --gap-y: 8rem;
+  }
+
+  .lg\:tw-c-gap-40{
+    --gap-x: 10rem;
+    --gap-y: 10rem;
+  }
+
+  .lg\:tw-c-gap-48{
+    --gap-x: 12rem;
+    --gap-y: 12rem;
+  }
+
+  .lg\:tw-c-gap-56{
+    --gap-x: 14rem;
+    --gap-y: 14rem;
+  }
+
+  .lg\:tw-c-gap-64{
+    --gap-x: 16rem;
+    --gap-y: 16rem;
+  }
+
+  .lg\:tw-c-gap-px{
+    --gap-x: 1px;
+    --gap-y: 1px;
+  }
+
+  .lg\:tw-c-gap-x-0{
+    --gap-x: 0;
+  }
+
+  .lg\:tw-c-gap-y-0{
+    --gap-y: 0;
+  }
+
+  .lg\:tw-c-gap-x-1{
+    --gap-x: 0.25rem;
+  }
+
+  .lg\:tw-c-gap-y-1{
+    --gap-y: 0.25rem;
+  }
+
+  .lg\:tw-c-gap-x-2{
+    --gap-x: 0.5rem;
+  }
+
+  .lg\:tw-c-gap-y-2{
+    --gap-y: 0.5rem;
+  }
+
+  .lg\:tw-c-gap-x-3{
+    --gap-x: 0.75rem;
+  }
+
+  .lg\:tw-c-gap-y-3{
+    --gap-y: 0.75rem;
+  }
+
+  .lg\:tw-c-gap-x-4{
+    --gap-x: 1rem;
+  }
+
+  .lg\:tw-c-gap-y-4{
+    --gap-y: 1rem;
+  }
+
+  .lg\:tw-c-gap-x-5{
+    --gap-x: 1.25rem;
+  }
+
+  .lg\:tw-c-gap-y-5{
+    --gap-y: 1.25rem;
+  }
+
+  .lg\:tw-c-gap-x-6{
+    --gap-x: 1.5rem;
+  }
+
+  .lg\:tw-c-gap-y-6{
+    --gap-y: 1.5rem;
+  }
+
+  .lg\:tw-c-gap-x-8{
+    --gap-x: 2rem;
+  }
+
+  .lg\:tw-c-gap-y-8{
+    --gap-y: 2rem;
+  }
+
+  .lg\:tw-c-gap-x-10{
+    --gap-x: 2.5rem;
+  }
+
+  .lg\:tw-c-gap-y-10{
+    --gap-y: 2.5rem;
+  }
+
+  .lg\:tw-c-gap-x-12{
+    --gap-x: 3rem;
+  }
+
+  .lg\:tw-c-gap-y-12{
+    --gap-y: 3rem;
+  }
+
+  .lg\:tw-c-gap-x-16{
+    --gap-x: 4rem;
+  }
+
+  .lg\:tw-c-gap-y-16{
+    --gap-y: 4rem;
+  }
+
+  .lg\:tw-c-gap-x-20{
+    --gap-x: 5rem;
+  }
+
+  .lg\:tw-c-gap-y-20{
+    --gap-y: 5rem;
+  }
+
+  .lg\:tw-c-gap-x-24{
+    --gap-x: 6rem;
+  }
+
+  .lg\:tw-c-gap-y-24{
+    --gap-y: 6rem;
+  }
+
+  .lg\:tw-c-gap-x-32{
+    --gap-x: 8rem;
+  }
+
+  .lg\:tw-c-gap-y-32{
+    --gap-y: 8rem;
+  }
+
+  .lg\:tw-c-gap-x-40{
+    --gap-x: 10rem;
+  }
+
+  .lg\:tw-c-gap-y-40{
+    --gap-y: 10rem;
+  }
+
+  .lg\:tw-c-gap-x-48{
+    --gap-x: 12rem;
+  }
+
+  .lg\:tw-c-gap-y-48{
+    --gap-y: 12rem;
+  }
+
+  .lg\:tw-c-gap-x-56{
+    --gap-x: 14rem;
+  }
+
+  .lg\:tw-c-gap-y-56{
+    --gap-y: 14rem;
+  }
+
+  .lg\:tw-c-gap-x-64{
+    --gap-x: 16rem;
+  }
+
+  .lg\:tw-c-gap-y-64{
+    --gap-y: 16rem;
+  }
+
+  .lg\:tw-c-gap-x-px{
+    --gap-x: 1px;
+  }
+
+  .lg\:tw-c-gap-y-px{
+    --gap-y: 1px;
+  }
+
   .lg\:tw-sr-only{
     position: absolute;
     width: 1px;
@@ -95714,6 +96727,253 @@ video {
 }
 
 @media (min-width: 1280px){
+  .xl\:tw-c-gap-0{
+    --gap-x: 0;
+    --gap-y: 0;
+  }
+
+  .xl\:tw-c-gap-1{
+    --gap-x: 0.25rem;
+    --gap-y: 0.25rem;
+  }
+
+  .xl\:tw-c-gap-2{
+    --gap-x: 0.5rem;
+    --gap-y: 0.5rem;
+  }
+
+  .xl\:tw-c-gap-3{
+    --gap-x: 0.75rem;
+    --gap-y: 0.75rem;
+  }
+
+  .xl\:tw-c-gap-4{
+    --gap-x: 1rem;
+    --gap-y: 1rem;
+  }
+
+  .xl\:tw-c-gap-5{
+    --gap-x: 1.25rem;
+    --gap-y: 1.25rem;
+  }
+
+  .xl\:tw-c-gap-6{
+    --gap-x: 1.5rem;
+    --gap-y: 1.5rem;
+  }
+
+  .xl\:tw-c-gap-8{
+    --gap-x: 2rem;
+    --gap-y: 2rem;
+  }
+
+  .xl\:tw-c-gap-10{
+    --gap-x: 2.5rem;
+    --gap-y: 2.5rem;
+  }
+
+  .xl\:tw-c-gap-12{
+    --gap-x: 3rem;
+    --gap-y: 3rem;
+  }
+
+  .xl\:tw-c-gap-16{
+    --gap-x: 4rem;
+    --gap-y: 4rem;
+  }
+
+  .xl\:tw-c-gap-20{
+    --gap-x: 5rem;
+    --gap-y: 5rem;
+  }
+
+  .xl\:tw-c-gap-24{
+    --gap-x: 6rem;
+    --gap-y: 6rem;
+  }
+
+  .xl\:tw-c-gap-32{
+    --gap-x: 8rem;
+    --gap-y: 8rem;
+  }
+
+  .xl\:tw-c-gap-40{
+    --gap-x: 10rem;
+    --gap-y: 10rem;
+  }
+
+  .xl\:tw-c-gap-48{
+    --gap-x: 12rem;
+    --gap-y: 12rem;
+  }
+
+  .xl\:tw-c-gap-56{
+    --gap-x: 14rem;
+    --gap-y: 14rem;
+  }
+
+  .xl\:tw-c-gap-64{
+    --gap-x: 16rem;
+    --gap-y: 16rem;
+  }
+
+  .xl\:tw-c-gap-px{
+    --gap-x: 1px;
+    --gap-y: 1px;
+  }
+
+  .xl\:tw-c-gap-x-0{
+    --gap-x: 0;
+  }
+
+  .xl\:tw-c-gap-y-0{
+    --gap-y: 0;
+  }
+
+  .xl\:tw-c-gap-x-1{
+    --gap-x: 0.25rem;
+  }
+
+  .xl\:tw-c-gap-y-1{
+    --gap-y: 0.25rem;
+  }
+
+  .xl\:tw-c-gap-x-2{
+    --gap-x: 0.5rem;
+  }
+
+  .xl\:tw-c-gap-y-2{
+    --gap-y: 0.5rem;
+  }
+
+  .xl\:tw-c-gap-x-3{
+    --gap-x: 0.75rem;
+  }
+
+  .xl\:tw-c-gap-y-3{
+    --gap-y: 0.75rem;
+  }
+
+  .xl\:tw-c-gap-x-4{
+    --gap-x: 1rem;
+  }
+
+  .xl\:tw-c-gap-y-4{
+    --gap-y: 1rem;
+  }
+
+  .xl\:tw-c-gap-x-5{
+    --gap-x: 1.25rem;
+  }
+
+  .xl\:tw-c-gap-y-5{
+    --gap-y: 1.25rem;
+  }
+
+  .xl\:tw-c-gap-x-6{
+    --gap-x: 1.5rem;
+  }
+
+  .xl\:tw-c-gap-y-6{
+    --gap-y: 1.5rem;
+  }
+
+  .xl\:tw-c-gap-x-8{
+    --gap-x: 2rem;
+  }
+
+  .xl\:tw-c-gap-y-8{
+    --gap-y: 2rem;
+  }
+
+  .xl\:tw-c-gap-x-10{
+    --gap-x: 2.5rem;
+  }
+
+  .xl\:tw-c-gap-y-10{
+    --gap-y: 2.5rem;
+  }
+
+  .xl\:tw-c-gap-x-12{
+    --gap-x: 3rem;
+  }
+
+  .xl\:tw-c-gap-y-12{
+    --gap-y: 3rem;
+  }
+
+  .xl\:tw-c-gap-x-16{
+    --gap-x: 4rem;
+  }
+
+  .xl\:tw-c-gap-y-16{
+    --gap-y: 4rem;
+  }
+
+  .xl\:tw-c-gap-x-20{
+    --gap-x: 5rem;
+  }
+
+  .xl\:tw-c-gap-y-20{
+    --gap-y: 5rem;
+  }
+
+  .xl\:tw-c-gap-x-24{
+    --gap-x: 6rem;
+  }
+
+  .xl\:tw-c-gap-y-24{
+    --gap-y: 6rem;
+  }
+
+  .xl\:tw-c-gap-x-32{
+    --gap-x: 8rem;
+  }
+
+  .xl\:tw-c-gap-y-32{
+    --gap-y: 8rem;
+  }
+
+  .xl\:tw-c-gap-x-40{
+    --gap-x: 10rem;
+  }
+
+  .xl\:tw-c-gap-y-40{
+    --gap-y: 10rem;
+  }
+
+  .xl\:tw-c-gap-x-48{
+    --gap-x: 12rem;
+  }
+
+  .xl\:tw-c-gap-y-48{
+    --gap-y: 12rem;
+  }
+
+  .xl\:tw-c-gap-x-56{
+    --gap-x: 14rem;
+  }
+
+  .xl\:tw-c-gap-y-56{
+    --gap-y: 14rem;
+  }
+
+  .xl\:tw-c-gap-x-64{
+    --gap-x: 16rem;
+  }
+
+  .xl\:tw-c-gap-y-64{
+    --gap-y: 16rem;
+  }
+
+  .xl\:tw-c-gap-x-px{
+    --gap-x: 1px;
+  }
+
+  .xl\:tw-c-gap-y-px{
+    --gap-y: 1px;
+  }
+
   .xl\:tw-sr-only{
     position: absolute;
     width: 1px;
