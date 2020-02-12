@@ -1,7 +1,7 @@
 version: '2.1'
 
 services:
-  dcas-l57:
+  dcas-l6:
     image: dcas-l6
     build: .
     ports:
