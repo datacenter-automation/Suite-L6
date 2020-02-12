@@ -18,28 +18,12 @@ use williamcruzme\FCM\Traits\HasDevices;
 /**
  * App\User
  *
- * @property int $id
- * @property string $uuid
- * @property string $name
- * @property string $email
- * @property int $lockout_time
- * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property string $password
- * @property string|null $api_token
- * @property string|null $remember_token
- * @property string $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $stripe_id
- * @property string|null $card_brand
- * @property string|null $card_last_four
- * @property string|null $trial_ends_at
- * @property \Illuminate\Support\Carbon|null $blocked_at
- * @property string $sub
  * @property-read \Biscolab\LaravelAuthLog\Models\AuthLog $current_auth_log
  * @property-read \Illuminate\Database\Eloquent\Collection|\williamcruzme\FCM\Device[] $devices
  * @property-read int|null $devices_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Biscolab\LaravelAuthLog\Models\AuthLog[] $forced_logouts
  * @property-read int|null $forced_logouts_count
+ * @property-read string $created_at
  * @property-read mixed $session_is_active
  * @property-read \Illuminate\Database\Eloquent\Collection|\Biscolab\LaravelAuthLog\Models\AuthLog[] $logins
  * @property-read int|null $logins_count
@@ -60,23 +44,6 @@ use williamcruzme\FCM\Traits\HasDevices;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User role($roles, $guard = null)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereApiToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereBlockedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCardBrand($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCardLastFour($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmailVerifiedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLockoutTime($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereStripeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereSub($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereTrialEndsAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUuid($value)
  * @mixin \Eloquent
  */
 class User extends Authenticatable

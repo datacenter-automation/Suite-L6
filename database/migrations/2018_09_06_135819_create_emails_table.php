@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateEmailsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -15,12 +16,24 @@ class CreateEmailsTable extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('subject');
-            $table->text('to')->nullable();
-            $table->text('cc')->nullable();
-            $table->text('bcc')->nullable();
-            $table->longText('body');
+            $table->string('message_id');
+            $table->string('recipients');
+            $table->json('sender');
+            $table->json('from');
+            $table->json('x_envelope_from');
+            $table->json('subject');
+            $table->json('body_plain');
+            $table->json('stripped_text');
+            $table->json('stripped_signature');
+            $table->json('body_html');
+            $table->json('stripped_html');
+            $table->json('attachments');
+            $table->json('message_headers');
+            $table->json('content_id_map');
+            $table->timestamp('attachments_synced')->nullable();
             $table->timestamps();
+
+            $table->unique(['message_id', 'recipients']);
         });
     }
 

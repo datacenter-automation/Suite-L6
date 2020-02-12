@@ -9,16 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 /**
  * App\Models\Website\SubMenuPage
  *
- * @property int $id
- * @property string|null $text
- * @property string|null $route
- * @property string|null $url
- * @property string|null $target
- * @property string|null $icon
- * @property string|null $can
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Website\MenuPage[] $menus
  * @property-read int|null $menus_count
  * @method static bool|null forceDelete()
@@ -27,18 +17,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Website\SubMenuPage onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage query()
  * @method static bool|null restore()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereCan($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereIcon($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereRoute($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereTarget($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereText($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\SubMenuPage whereUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($column, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($column, $states)
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Website\SubMenuPage withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Website\SubMenuPage withoutTrashed()
  * @mixin \Eloquent

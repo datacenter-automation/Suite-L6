@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-02-09 18:00:49.
+    * Generated on 2020-02-29 19:40:08.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -78,6 +78,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -324,6 +325,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -570,6 +572,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -816,6 +819,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -1062,6 +1066,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -1308,6 +1313,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -1554,6 +1560,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,
@@ -1800,6 +1807,7 @@ namespace PHPSTORM_META {
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
         'OddNumberValidation' => \Alphametric\Validation\Rules\OddNumber::class,
+        'Psr\Http\Message\ResponseInterface' => \Nyholm\Psr7\Response::class,
         'RecordOwnerValidation' => \Alphametric\Validation\Rules\RecordOwner::class,
         'Spatie\Honeypot\SpamResponder\SpamResponder' => \Spatie\Honeypot\SpamResponder\BlankPageResponder::class,
         'Spatie\Permission\Contracts\Permission' => \Spatie\Permission\Models\Permission::class,

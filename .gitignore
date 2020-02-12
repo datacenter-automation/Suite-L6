@@ -116,3 +116,6 @@ public/storage
 public/hot
 storage/*.key
 /.vagrant
+
+# API Token for Testing
+api_token.txt

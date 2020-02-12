@@ -8,33 +8,13 @@ use Illuminate\Database\Eloquent\Builder;
 /**
  * App\Logger
  *
- * @property int $id
- * @property string $method
- * @property string $controller
- * @property string $action
- * @property string $parameter
- * @property string $headers
- * @property string $origin_ip_address
- * @property string $user
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger guest()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger loggedIn()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereAction($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereController($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereHeaders($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereMethod($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereOriginIpAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereParameter($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Logger whereUser($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($column, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($column, $states)
  * @mixin \Eloquent
  */
 class Logger extends BaseModel

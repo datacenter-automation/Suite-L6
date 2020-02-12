@@ -10,24 +10,14 @@ use Illuminate\Notifications\Notifiable;
 /**
  * App\LoginAttempt
  *
- * @property int $id
- * @property string $email
- * @property string $token
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
  * @property-read \App\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($column, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($column, $states)
  * @mixin \Eloquent
  */
 class LoginAttempt extends BaseModel
