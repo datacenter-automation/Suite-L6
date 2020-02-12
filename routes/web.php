@@ -11,6 +11,7 @@
 |
 */
 
+use App\Email;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use williamcruzme\FCM\Facades\Device;
 
@@ -67,4 +68,8 @@ Route::get('/auth0/callback', '\Auth0\Login\Auth0Controller@callback')->name('au
 Route::prefix('/dashboard')->middleware(['auth', 'auth.lock', 'auth.log', 'active_user'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/logs', 'LogController@show')->name('logs');
+});
+
+Route::get('testing0', function () {
+    return Email::showMergedMessages();
 });

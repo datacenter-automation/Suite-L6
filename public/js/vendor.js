@@ -1,3 +1,10 @@
+/**
+ * @project        Datacenter Automation Suite
+ * @author         A. Renner
+ * @release        0.0.1-alpha
+ *
+ */
+
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/js/vendor"],{
 
 /***/ "./node_modules/jquery/dist/jquery.js":
@@ -23097,13 +23104,13 @@ module.exports = g;
 
 /***/ 1:
 /*!************************!*\
-  !*** multi vue jquery ***!
+  !*** multi jquery vue ***!
   \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! vue */"./node_modules/vue/dist/vue.common.js");
-module.exports = __webpack_require__(/*! jquery */"./node_modules/jquery/dist/jquery.js");
+__webpack_require__(/*! jquery */"./node_modules/jquery/dist/jquery.js");
+module.exports = __webpack_require__(/*! vue */"./node_modules/vue/dist/vue.common.js");
 
 
 /***/ })
