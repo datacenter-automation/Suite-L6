@@ -5,3 +5,16 @@
  */
 
 require('./bootstrap');
+
+import {Workbox} from 'workbox-window';
+
+if ('serviceWorker' in navigator) {
+  const wb = new Workbox('/service-worker.js');
+
+  wb.register();
+}
+
+import Vue from 'vue';
+import SvgVue from 'svg-vue';
+
+Vue.use(SvgVue);

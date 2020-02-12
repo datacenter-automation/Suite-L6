@@ -4,8 +4,8 @@
 
 <!--[![Build Status](https://travis-ci.org/datacenter-automation/suite-l6.svg?branch=master)](https://travis-ci.org/datacenter-automation/suite-l6) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/datacenter-automation/suite-l6/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/datacenter-automation/suite-l6/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/datacenter-automation/suite-l6/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/datacenter-automation/suite-l6/?branch=master) -->
 ## PRE_ALPHA
-#### Build 2020.02.01
-##### [Laravel Framework 6.13.1]
+#### Build 2020.02.16
+##### [Laravel Framework 6.15.1]
 ###### **PHP 7.4.2** (built: Jan 23 2020 11:22:07) ( NTS ) (_`Zend Engine`_ v3.4.0 & _`Zend OPCache`_ v7.4.2)
 ###### **mySQL** version 15.1 10.4.12-MariaDB
 ###### **redis** version 5.0.5
