@@ -68,3 +68,7 @@ Route::prefix('/dashboard')->middleware(['auth', 'auth.lock', 'auth.log', 'activ
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/logs', 'LogController@show')->name('logs');
 });
+
+Route::get('mailgun', function () {
+    return App\General\MailgunRetrieveMessages::get()->messages()->convert();
+});

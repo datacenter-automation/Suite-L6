@@ -5,7 +5,6 @@ namespace App\Providers;
 use App\Repositories\CustomUserRepository;
 //use Auth;
 use Auth0\Login\Contract\Auth0UserRepository;
-use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 //use Pyaesone17\Lapse\Lapse;
 use App\Contracts\HttpClient;
