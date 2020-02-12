@@ -34,7 +34,7 @@ use williamcruzme\FCM\Traits\HasDevices;
  * @property string|null $card_last_four
  * @property string|null $trial_ends_at
  * @property \Illuminate\Support\Carbon|null $blocked_at
- * @property string $sub
+ * @property string|null $sub
  * @property-read \Biscolab\LaravelAuthLog\Models\AuthLog $current_auth_log
  * @property-read \Illuminate\Database\Eloquent\Collection|\williamcruzme\FCM\Device[] $devices
  * @property-read int|null $devices_count
