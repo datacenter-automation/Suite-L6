@@ -24,8 +24,8 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($field, $states)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($field, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereNotState($column, $states)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\BaseModel whereState($column, $states)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt whereUpdatedAt($value)
  * @mixin \Eloquent

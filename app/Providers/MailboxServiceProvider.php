@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Mailboxes\PostmarkTestMailbox;
+use App\Mailboxes\MailgunTestMailbox;
 use BeyondCode\Mailbox\Facades\Mailbox;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +15,7 @@ class MailboxServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Mailbox::from('74eefc5e44320f361884ae8c8810ea6b@inbound.postmarkapp.com', PostmarkTestMailbox::class);
+        //Mailbox::from('incoming@mailbox-demo.elementalfusion.online', MailgunTestMailbox::class);
+        Mailbox::catchAll(MailgunTestMailbox::class);
     }
 }

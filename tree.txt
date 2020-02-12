@@ -12,9 +12,11 @@
 │   │   │   └── [ 712]  ./app/Console/Commands/TestProgressBar.php
 │   │   └── [ 644]  ./app/Console/Kernel.php
 │   ├── [4.0K]  ./app/Contracts
+│   │   ├── [ 437]  ./app/Contracts/FilterContract.php
 │   │   ├── [ 518]  ./app/Contracts/HttpClient.php
 │   │   └── [1.2K]  ./app/Contracts/SearchContract.php
 │   ├── [4.0K]  ./app/EloquentFilters
+│   ├── [1.1K]  ./app/Email.php
 │   ├── [4.0K]  ./app/Enums
 │   │   └── [2.0K]  ./app/Enums/AutoProvisionMonitorStates.php
 │   ├── [4.0K]  ./app/Events
@@ -27,10 +29,12 @@
 │   │   └── [3.7K]  ./app/Exceptions/Handler.php
 │   ├── [4.0K]  ./app/Filters
 │   ├── [4.0K]  ./app/General
+│   │   ├── [1.0K]  ./app/General/ApiSearch.php
 │   │   ├── [1.1K]  ./app/General/BuildBaseMenu.php
 │   │   ├── [ 272]  ./app/General/ClickTracker.php
 │   │   ├── [ 616]  ./app/General/DcasLogger.php
 │   │   ├── [2.7K]  ./app/General/ExtendedValidationRules.php
+│   │   ├── [3.2K]  ./app/General/MailgunRetrieveMessages.php
 │   │   ├── [ 352]  ./app/General/MenuBuilder.php
 │   │   └── [6.0K]  ./app/General/ProcessMenu.php
 │   ├── [4.0K]  ./app/Helpers
@@ -94,8 +98,10 @@
 │   ├── [2.5K]  ./app/LoginAttempt.php
 │   ├── [4.0K]  ./app/Macros
 │   │   └── [ 373]  ./app/Macros/Request.php
+│   ├── [4.0K]  ./app/Mail
+│   │   └── [ 661]  ./app/Mail/TestMail.php
 │   ├── [4.0K]  ./app/Mailboxes
-│   │   └── [ 184]  ./app/Mailboxes/PostmarkTestMailbox.php
+│   │   └── [ 363]  ./app/Mailboxes/MailgunTestMailbox.php
 │   ├── [4.0K]  ./app/MailProcessing
 │   │   └── [ 663]  ./app/MailProcessing/DefaultHook.php
 │   ├── [4.0K]  ./app/Models
@@ -121,7 +127,7 @@
 │   │   ├── [ 380]  ./app/Providers/BroadcastServiceProvider.php
 │   │   ├── [1.1K]  ./app/Providers/EventServiceProvider.php
 │   │   ├── [ 616]  ./app/Providers/GitHubServiceProvider.php
-│   │   ├── [ 430]  ./app/Providers/MailboxServiceProvider.php
+│   │   ├── [ 472]  ./app/Providers/MailboxServiceProvider.php
 │   │   ├── [3.2K]  ./app/Providers/MenuServiceProvider.php
 │   │   ├── [2.5K]  ./app/Providers/OtherValidationRulesProvider.php
 │   │   └── [4.6K]  ./app/Providers/RouteServiceProvider.php
@@ -133,6 +139,7 @@
 │   │   └── [4.0K]  ./app/Services/GitHub
 │   │       ├── [ 627]  ./app/Services/GitHub/GitHub.php
 │   │       └── [1.8K]  ./app/Services/GitHub/Issue.php
+│   ├── [4.0K]  ./app/States
 │   ├── [4.0K]  ./app/Traits
 │   │   ├── [3.4K]  ./app/Traits/ApiRespondable.php
 │   │   ├── [ 657]  ./app/Traits/Encryptable.php
@@ -157,7 +164,7 @@
 │   └── [4.0K]  ./bin/Windows
 │       ├── [ 183]  ./bin/Windows/add-console-aliases.bat
 │       └── [  76]  ./bin/Windows/composer.bat
-├── [5.5K]  ./composer.json
+├── [5.7K]  ./composer.json
 ├── [2.3K]  ./composer.old.json
 ├── [4.0K]  ./config
 │   ├── [ 10K]  ./config/adminlte.php
@@ -208,6 +215,7 @@
 │   ├── [1.8K]  ./config/snipe.php
 │   ├── [1009]  ./config/snooze.php
 │   ├── [1.7K]  ./config/spy.php
+│   ├── [ 470]  ./config/tail.php
 │   ├── [1004]  ./config/tinker.php
 │   ├── [1.6K]  ./config/tinx.php
 │   ├── [1.7K]  ./config/trustedproxy.php
@@ -223,7 +231,7 @@
 │   ├── [4.0K]  ./database/migrations
 │   │   ├── [ 939]  ./database/migrations/2014_10_12_000000_create_users_table.php
 │   │   ├── [ 683]  ./database/migrations/2014_10_12_100000_create_password_resets_table.php
-│   │   ├── [ 799]  ./database/migrations/2018_09_06_135819_create_emails_table.php
+│   │   ├── [ 837]  ./database/migrations/2018_09_06_135819_create_emails_table.php
 │   │   ├── [ 965]  ./database/migrations/2018_11_12_104516_create_menu_pages_table.php
 │   │   ├── [ 964]  ./database/migrations/2019_05_03_000001_create_customer_columns.php
 │   │   ├── [1.0K]  ./database/migrations/2019_05_03_000002_create_subscriptions_table.php
@@ -237,8 +245,8 @@
 │   │   ├── [ 872]  ./database/migrations/2019_12_24_073650_create_logger_table.php
 │   │   ├── [ 705]  ./database/migrations/2020_01_02_195909_create_login_attempts_table.php
 │   │   ├── [ 823]  ./database/migrations/2020_01_05_004742_create_sessions_table.php
-│   │   ├── [ 634]  ./database/migrations/2020_01_29_011010_add_sub_to_users_table.php
-│   │   └── [ 674]  ./database/migrations/2020_01_29_170141_create_mailbox_inbound_emails_table.php
+│   │   ├── [ 646]  ./database/migrations/2020_01_29_011010_add_sub_to_users_table.php
+│   │   └── [ 674]  ./database/migrations/2020_01_29_012020_create_mailbox_inbound_emails_table.php
 │   ├── [4.0K]  ./database/schema
 │   └── [4.0K]  ./database/seeds
 │       ├── [ 247]  ./database/seeds/DatabaseSeeder.php
@@ -258,7 +266,7 @@
 ├── [ 253]  ./_ide_helper_models.php
 ├── [5.0K]  ./LICENSE.html
 ├── [800K]  ./mysql-connector-java-5.1.44.jar
-├── [6.1K]  ./package.json
+├── [6.6K]  ./package.json
 ├── [ 533]  ./phpbench.json
 ├── [2.5K]  ./phpcs-ruleset.xml
 ├── [2.4K]  ./phpmd-ruleset.xml
@@ -294,18 +302,26 @@
 │   ├── [4.0K]  ./public/img
 │   ├── [1.8K]  ./public/index.php
 │   ├── [4.0K]  ./public/js
+│   │   ├── [ 44K]  ./public/js/analytics.js
 │   │   ├── [1.5M]  ./public/js/app.js
 │   │   ├── [ 15K]  ./public/js/laravel-routes.js
-│   │   └── [6.1K]  ./public/js/manifest.js
-│   ├── [2.2K]  ./public/mix-manifest.json
-│   └── [   0]  ./public/phpcs.xsl
+│   │   └── [6.2K]  ./public/js/manifest.js
+│   ├── [1.8K]  ./public/mix-manifest.json
+│   ├── [   0]  ./public/phpcs.xsl
+│   ├── [3.5K]  ./public/service-worker.js
+│   └── [ 68K]  ./public/workbox-41c5d200.js
 ├── [ 537]  ./rector.yaml
 ├── [4.0K]  ./resources
 │   ├── [4.0K]  ./resources/js
-│   │   ├── [ 253]  ./resources/js/app.js
+│   │   ├── [ 471]  ./resources/js/app.js
 │   │   ├── [1.3K]  ./resources/js/bootstrap.js
 │   │   ├── [4.0K]  ./resources/js/Components
 │   │   │   └── [2.1K]  ./resources/js/Components/NotificationTest.vue
+│   │   ├── [4.0K]  ./resources/js/models
+│   │   ├── [4.0K]  ./resources/js/pages
+│   │   ├── [4.0K]  ./resources/js/router
+│   │   │   └── [ 189]  ./resources/js/router/index.js
+│   │   ├── [4.0K]  ./resources/js/sections
 │   │   ├── [4.0K]  ./resources/js/services
 │   │   │   ├── [ 524]  ./resources/js/services/errorHandler.js
 │   │   │   └── [ 437]  ./resources/js/services/toast.js
@@ -495,6 +511,7 @@
 │   ├── [4.0K]  ./resources/sass
 │   │   ├── [ 706]  ./resources/sass/app.scss
 │   │   └── [ 317]  ./resources/sass/_variables.scss
+│   ├── [4.0K]  ./resources/svg
 │   └── [4.0K]  ./resources/views
 │       ├── [4.0K]  ./resources/views/auth
 │       │   ├── [ 826]  ./resources/views/auth/link-sent.blade.php
@@ -509,6 +526,9 @@
 │       │   └── [  28]  ./resources/views/auth/verify.blade.php
 │       ├── [4.0K]  ./resources/views/dashboard
 │       │   └── [ 916]  ./resources/views/dashboard/logs.blade.php
+│       ├── [4.0K]  ./resources/views/emails
+│       │   └── [4.0K]  ./resources/views/emails/tests
+│       │       └── [  99]  ./resources/views/emails/tests/testmail.blade.php
 │       ├── [4.0K]  ./resources/views/errors
 │       │   ├── [ 131]  ./resources/views/errors/401.blade.php
 │       │   ├── [ 153]  ./resources/views/errors/403.blade.php
@@ -544,7 +564,7 @@
 │   ├── [   6]  ./routes/internal.php
 │   ├── [   6]  ./routes/local.php
 │   ├── [ 102]  ./routes/server-fetched-partials.php
-│   ├── [3.2K]  ./routes/web.php
+│   ├── [3.5K]  ./routes/web.php
 │   └── [   6]  ./routes/whiteglove.php
 ├── [216K]  ./schemaSpy_5.0.0.jar
 ├── [ 542]  ./server.php
@@ -565,7 +585,7 @@
 │   ├── [ 380]  ./tests/CreatesApplication.php
 │   ├── [1.0K]  ./tests/DuskTestCase.php
 │   ├── [4.0K]  ./tests/Feature
-│   │   └── [ 289]  ./tests/Feature/ExampleTest.php
+│   │   └── [1.2K]  ./tests/Feature/IncomingMailTest.php
 │   ├── [4.0K]  ./tests/HttpRequests
 │   │   ├── [ 312]  ./tests/HttpRequests/api.http
 │   │   └── [4.0K]  ./tests/HttpRequests/Stubs
@@ -577,10 +597,9 @@
 │   │   └── [101K]  ./tests/snipe-base/snipe_snapshot.sql
 │   ├── [ 163]  ./tests/TestCase.php
 │   └── [4.0K]  ./tests/Unit
-│       └── [ 243]  ./tests/Unit/ExampleTest.php
 ├── [5.0K]  ./tinker.config.php
 ├── [ 173]  ./tsconfig.json
 ├── [ 295]  ./webpack.config.js
-└── [1.7K]  ./webpack.mix.js
+└── [3.1K]  ./webpack.mix.js
 
-99 directories, 484 files
+108 directories, 494 files
