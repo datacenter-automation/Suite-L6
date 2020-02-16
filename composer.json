@@ -87,7 +87,7 @@
     "ergebnis/composer-normalize": "^2.2",
     "friendsofphp/php-cs-fixer": "^2.16",
     "fzaninotto/faker": "^1.9",
-    "infection/infection": "^0.14.4",
+    "infection/infection": "^0.15.2",
     "jlapp/swaggervel": "dev-master",
     "johnkary/phpunit-speedtrap": "^3.1",
     "kris/laravel-form-builder": "^1.22",
