@@ -6562,16 +6562,16 @@
         },
         {
             "name": "spatie/laravel-model-states",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-model-states.git",
-                "reference": "7e4ec8981316c8c938dcc2aab1a0e7dcaf0c0a59"
+                "reference": "440b63dbb705d995d8142966e3432caea5dde3db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-model-states/zipball/7e4ec8981316c8c938dcc2aab1a0e7dcaf0c0a59",
-                "reference": "7e4ec8981316c8c938dcc2aab1a0e7dcaf0c0a59",
+                "url": "https://api.github.com/repos/spatie/laravel-model-states/zipball/440b63dbb705d995d8142966e3432caea5dde3db",
+                "reference": "440b63dbb705d995d8142966e3432caea5dde3db",
                 "shasum": ""
             },
             "require": {
@@ -6609,7 +6609,7 @@
                 "spatie",
                 "state"
             ],
-            "time": "2019-12-13T09:09:30+00:00"
+            "time": "2020-02-18T09:26:09+00:00"
         },
         {
             "name": "spatie/laravel-permission",
