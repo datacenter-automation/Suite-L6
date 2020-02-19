@@ -3186,16 +3186,16 @@
         },
         {
             "name": "laravel/envoy",
-            "version": "v1.6.4",
+            "version": "v1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/envoy.git",
-                "reference": "34ff218d94facf7506d0c86eb8347178e4f5b585"
+                "reference": "45fc4c3ebf070437b7367e5294314d618c3201fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/envoy/zipball/34ff218d94facf7506d0c86eb8347178e4f5b585",
-                "reference": "34ff218d94facf7506d0c86eb8347178e4f5b585",
+                "url": "https://api.github.com/repos/laravel/envoy/zipball/45fc4c3ebf070437b7367e5294314d618c3201fd",
+                "reference": "45fc4c3ebf070437b7367e5294314d618c3201fd",
                 "shasum": ""
             },
             "require": {
@@ -3236,7 +3236,7 @@
                 "laravel",
                 "ssh"
             ],
-            "time": "2019-11-28T11:29:09+00:00"
+            "time": "2020-02-18T19:21:34+00:00"
         },
         {
             "name": "laravel/framework",
