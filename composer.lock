@@ -6786,16 +6786,16 @@
         },
         {
             "name": "spatie/laravel-tail",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-tail.git",
-                "reference": "99c276cf58e4c1b06ff9b46fc3e043f678e12d96"
+                "reference": "6c8753a3c42379d46b549dbf2ce80e652b132fa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/99c276cf58e4c1b06ff9b46fc3e043f678e12d96",
-                "reference": "99c276cf58e4c1b06ff9b46fc3e043f678e12d96",
+                "url": "https://api.github.com/repos/spatie/laravel-tail/zipball/6c8753a3c42379d46b549dbf2ce80e652b132fa3",
+                "reference": "6c8753a3c42379d46b549dbf2ce80e652b132fa3",
                 "shasum": ""
             },
             "require": {
@@ -6843,7 +6843,7 @@
                 "log",
                 "tail"
             ],
-            "time": "2020-02-14T17:18:52+00:00"
+            "time": "2020-02-23T21:11:07+00:00"
         },
         {
             "name": "spatie/once",
