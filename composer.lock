@@ -676,16 +676,16 @@
         },
         {
             "name": "coderello/laravel-shared-data",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/coderello/laravel-shared-data.git",
-                "reference": "cc77f11f2cb69718fc951ca83df10970af83df18"
+                "reference": "9c54cc50387100de54539220f1d51a14843828ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coderello/laravel-shared-data/zipball/cc77f11f2cb69718fc951ca83df10970af83df18",
-                "reference": "cc77f11f2cb69718fc951ca83df10970af83df18",
+                "url": "https://api.github.com/repos/coderello/laravel-shared-data/zipball/9c54cc50387100de54539220f1d51a14843828ba",
+                "reference": "9c54cc50387100de54539220f1d51a14843828ba",
                 "shasum": ""
             },
             "require": {
@@ -717,7 +717,7 @@
                 "MIT"
             ],
             "description": "Package for sharing data from Laravel to JavaScript.",
-            "time": "2020-02-05T13:00:57+00:00"
+            "time": "2020-02-24T12:45:17+00:00"
         },
         {
             "name": "darkaonline/l5-swagger",
