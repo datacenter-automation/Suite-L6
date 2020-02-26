@@ -67,7 +67,7 @@
         "laravel-mix-vue-auto-routing": "^0.1.2",
         "laravel-mix-workbox": "^0.1.2",
         "lodash": "^4.17.15",
-        "mocha": "^7.0.1",
+        "mocha": "^7.1.0",
         "mocha-webpack": "^1.1.0",
         "moxios": "^0.4.0",
         "node-sass": "^4.13.1",
