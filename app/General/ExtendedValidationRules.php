@@ -2,32 +2,31 @@
 
 namespace App\General;
 
-use Alphametric\Validation\Rules\CitizenIdentification;
-use Alphametric\Validation\Rules\Decimal;
-use Alphametric\Validation\Rules\DisposableEmail;
-use Alphametric\Validation\Rules\DoesNotExist;
-use Alphametric\Validation\Rules\Domain;
-use Alphametric\Validation\Rules\EncodedImage;
-use Alphametric\Validation\Rules\EndsWith;
-use Alphametric\Validation\Rules\Equals;
-use Alphametric\Validation\Rules\EvenNumber;
-use Alphametric\Validation\Rules\FileExists;
 use Alphametric\Validation\Rules\ISBN;
-use Alphametric\Validation\Rules\LocationCoordinates;
+use Alphametric\Validation\Rules\Domain;
+use Alphametric\Validation\Rules\Equals;
+use Alphametric\Validation\Rules\Decimal;
+use Alphametric\Validation\Rules\EndsWith;
 use Alphametric\Validation\Rules\Lowercase;
-use Alphametric\Validation\Rules\MacAddress;
-use Alphametric\Validation\Rules\MonetaryFigure;
 use Alphametric\Validation\Rules\OddNumber;
-use Alphametric\Validation\Rules\RecordOwner;
-use Alphametric\Validation\Rules\StrongPassword;
-use Alphametric\Validation\Rules\TelephoneNumber;
 use Alphametric\Validation\Rules\Titlecase;
 use Alphametric\Validation\Rules\Uppercase;
+use Alphametric\Validation\Rules\EvenNumber;
+use Alphametric\Validation\Rules\FileExists;
+use Alphametric\Validation\Rules\MacAddress;
+use Alphametric\Validation\Rules\RecordOwner;
+use Alphametric\Validation\Rules\DoesNotExist;
+use Alphametric\Validation\Rules\EncodedImage;
+use Alphametric\Validation\Rules\MonetaryFigure;
+use Alphametric\Validation\Rules\StrongPassword;
+use Alphametric\Validation\Rules\DisposableEmail;
+use Alphametric\Validation\Rules\TelephoneNumber;
 use Alphametric\Validation\Rules\WithoutWhitespace;
+use Alphametric\Validation\Rules\LocationCoordinates;
+use Alphametric\Validation\Rules\CitizenIdentification;
 
 class ExtendedValidationRules
 {
-
     public function __construct()
     {
         $rules = [

@@ -8,13 +8,12 @@ use Illuminate\Console\Command;
 
 class CloseInactiveGithubIssuesAndPRs extends Command
 {
-
-    protected $signature = 'bot:close-inactive-github-issues-and-prs';
-
     protected $description = 'Close inactive GitHub issues and PRs';
 
     /** @var \App\Services\GitHub */
     protected $gitHub;
+
+    protected $signature = 'bot:close-inactive-github-issues-and-prs';
 
     public function __construct(GitHub $gitHub)
     {

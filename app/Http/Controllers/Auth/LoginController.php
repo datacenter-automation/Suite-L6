@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
@@ -45,6 +45,22 @@ class LoginController extends Controller
     }
 
     /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     */
+    public function locked()
+    {
+        if (! session('lock-expires-at')) {
+            return redirect('/');
+        }
+
+        if (session('lock-expires-at') > now()) {
+            return redirect('/');
+        }
+
+        return view('auth.locked');
+    }
+
+    /**
      * Log the user out of the application.
      *
      * @param \Illuminate\Http\Request $request
@@ -60,22 +76,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         return $this->loggedOut($request) ?: redirect('/');
-    }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
-     */
-    public function locked()
-    {
-        if (! session('lock-expires-at')) {
-            return redirect('/');
-        }
-
-        if (session('lock-expires-at') > now()) {
-            return redirect('/');
-        }
-
-        return view('auth.locked');
     }
 
     /**

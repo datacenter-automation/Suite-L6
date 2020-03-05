@@ -3,8 +3,6 @@
 namespace App\Listeners;
 
 use App\Events\FileDownloadRequested;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class DecryptFile
 {
@@ -21,7 +19,8 @@ class DecryptFile
     /**
      * Handle the event.
      *
-     * @param  FileDownloadRequested  $event
+     * @param FileDownloadRequested $event
+     *
      * @return void
      */
     public function handle(FileDownloadRequested $event)

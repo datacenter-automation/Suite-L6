@@ -7,37 +7,27 @@ use Github\Client;
 class Issue
 {
 
-    /** @var array */
-    protected $issueAttributes;
-
     /** @var \App\Services\GitHub\GitHub */
     protected $gitHub;
 
-    public static function create(array $issueAttributes): self
-    {
-        return app(static::class)->setAttributes($issueAttributes);
-    }
+    /** @var array */
+    protected $issueAttributes;
 
     public function __construct(Client $gitHub)
     {
         $this->gitHub = $gitHub;
     }
 
-    public function setAttributes(array $issueAttributes)
+    public function close(string $message)
     {
-        $this->issueAttributes = $issueAttributes;
+        $this->gitHub->api('issue')->comments()->create('datacenter-automation', $this->repositoryName(), $this->number(), ['body' => $message]);
 
-        return $this;
+        $this->gitHub->api('issue')->update('datacenter-automation', $this->repositoryName(), $this->number(), ['state' => 'closed']);
     }
 
-    public function number(): int
+    public static function create(array $issueAttributes): self
     {
-        return $this->issueAttributes['number'];
-    }
-
-    public function repositoryName(): string
-    {
-        return array_reverse(explode('/', $this->issueAttributes['repository_url']))[0];
+        return app(static::class)->setAttributes($issueAttributes);
     }
 
     /**
@@ -59,6 +49,23 @@ class Issue
         return collect($this->issueAttributes['labels'])->pluck('name')->values()->toArray();
     }
 
+    public function number(): int
+    {
+        return $this->issueAttributes['number'];
+    }
+
+    public function repositoryName(): string
+    {
+        return array_reverse(explode('/', $this->issueAttributes['repository_url']))[0];
+    }
+
+    public function setAttributes(array $issueAttributes)
+    {
+        $this->issueAttributes = $issueAttributes;
+
+        return $this;
+    }
+
     public function type(): string
     {
         return array_has($this->issueAttributes, 'pull_request') ? 'pull request' : 'issue';
@@ -67,12 +74,5 @@ class Issue
     public function url(): string
     {
         return $this->issueAttributes['html_url'];
-    }
-
-    public function close(string $message)
-    {
-        $this->gitHub->api('issue')->comments()->create('datacenter-automation', $this->repositoryName(), $this->number(), ['body' => $message]);
-
-        $this->gitHub->api('issue')->update('datacenter-automation', $this->repositoryName(), $this->number(), ['state' => 'closed']);
     }
 }

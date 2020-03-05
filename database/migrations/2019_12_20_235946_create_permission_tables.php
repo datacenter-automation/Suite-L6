@@ -6,6 +6,22 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePermissionTables extends Migration
 {
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $tableNames = config('permission.table_names');
+
+        Schema::drop($tableNames['role_has_permissions']);
+        Schema::drop($tableNames['model_has_roles']);
+        Schema::drop($tableNames['model_has_permissions']);
+        Schema::drop($tableNames['roles']);
+        Schema::drop($tableNames['permissions']);
+    }
     /**
      * Run the migrations.
      *
@@ -42,8 +58,10 @@ class CreatePermissionTables extends Migration
                 ->on($tableNames['permissions'])
                 ->onDelete('cascade');
 
-            $table->primary(['permission_id', $columnNames['model_morph_key'], 'model_type'],
-                    'model_has_permissions_permission_model_type_primary');
+            $table->primary(
+                ['permission_id', $columnNames['model_morph_key'], 'model_type'],
+                'model_has_permissions_permission_model_type_primary'
+            );
         });
 
         Schema::create($tableNames['model_has_roles'], function (Blueprint $table) use ($tableNames, $columnNames) {
@@ -58,8 +76,10 @@ class CreatePermissionTables extends Migration
                 ->on($tableNames['roles'])
                 ->onDelete('cascade');
 
-            $table->primary(['role_id', $columnNames['model_morph_key'], 'model_type'],
-                    'model_has_roles_role_model_type_primary');
+            $table->primary(
+                ['role_id', $columnNames['model_morph_key'], 'model_type'],
+                'model_has_roles_role_model_type_primary'
+            );
         });
 
         Schema::create($tableNames['role_has_permissions'], function (Blueprint $table) use ($tableNames) {
@@ -82,21 +102,5 @@ class CreatePermissionTables extends Migration
         app('cache')
             ->store(config('permission.cache.store') != 'default' ? config('permission.cache.store') : null)
             ->forget(config('permission.cache.key'));
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        $tableNames = config('permission.table_names');
-
-        Schema::drop($tableNames['role_has_permissions']);
-        Schema::drop($tableNames['model_has_roles']);
-        Schema::drop($tableNames['model_has_permissions']);
-        Schema::drop($tableNames['roles']);
-        Schema::drop($tableNames['permissions']);
     }
 }

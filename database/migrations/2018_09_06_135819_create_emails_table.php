@@ -1,11 +1,21 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateEmailsTable extends Migration
 {
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('emails');
+    }
 
     /**
      * Run the migrations.
@@ -35,15 +45,5 @@ class CreateEmailsTable extends Migration
 
             $table->unique(['message_id', 'recipients']);
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('emails');
     }
 }

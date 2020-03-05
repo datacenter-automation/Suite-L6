@@ -12,21 +12,6 @@ class CustomUserRepository extends Auth0UserRepository
 {
 
     /**
-     * Get an existing user or create a new one
-     *
-     * @param array $profile - Auth0 profile
-     *
-     * @return User
-     */
-    protected function upsertUser($profile)
-    {
-        return User::firstOrCreate(['sub' => $profile['sub']], [
-            'email' => $profile['email'] ?? '',
-            'name'  => $profile['name'] ?? '',
-        ]);
-    }
-
-    /**
      * Authenticate a user with a decoded ID Token
      *
      * @param object $jwt
@@ -52,5 +37,20 @@ class CustomUserRepository extends Auth0UserRepository
         $user = $this->upsertUser($userinfo['profile']);
 
         return new Auth0User($user->getAttributes(), $userinfo['accessToken']);
+    }
+
+    /**
+     * Get an existing user or create a new one
+     *
+     * @param array $profile - Auth0 profile
+     *
+     * @return User
+     */
+    protected function upsertUser($profile)
+    {
+        return User::firstOrCreate(['sub' => $profile['sub']], [
+            'email' => $profile['email'] ?? '',
+            'name'  => $profile['name'] ?? '',
+        ]);
     }
 }

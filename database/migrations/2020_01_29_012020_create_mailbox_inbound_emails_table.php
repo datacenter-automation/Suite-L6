@@ -7,6 +7,13 @@ use Illuminate\Database\Migrations\Migration;
 class CreateMailboxInboundEmailsTable extends Migration
 {
     /**
+     * Reverse the migrations.
+     */
+    public function down()
+    {
+        Schema::dropIfExists('mailbox_inbound_emails');
+    }
+    /**
      * Run the migrations.
      */
     public function up()
@@ -17,12 +24,5 @@ class CreateMailboxInboundEmailsTable extends Migration
             $table->longText('message');
             $table->nullableTimestamps();
         });
-    }
-    /**
-     * Reverse the migrations.
-     */
-    public function down()
-    {
-        Schema::dropIfExists('mailbox_inbound_emails');
     }
 }

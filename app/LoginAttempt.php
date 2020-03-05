@@ -2,9 +2,8 @@
 
 namespace App;
 
-use App\Models\BaseModel;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 use Illuminate\Notifications\Notifiable;
 
 /**
@@ -18,6 +17,7 @@ use Illuminate\Notifications\Notifiable;
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
  * @property-read \App\User $user
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\LoginAttempt query()
@@ -32,7 +32,6 @@ use Illuminate\Notifications\Notifiable;
  */
 class LoginAttempt extends BaseModel
 {
-
     use Notifiable;
 
     /**
@@ -44,6 +43,22 @@ class LoginAttempt extends BaseModel
         'email',
         'token',
     ];
+
+    /**
+     * @inheritDoc
+     */
+    public function searchableAs(): string
+    {
+        return 'login_attempt_index';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function toSearchableArray(): array
+    {
+        return $this->toArray();
+    }
 
     /**
      * @return mixed
@@ -68,21 +83,5 @@ class LoginAttempt extends BaseModel
     protected function registerStates(): void
     {
         return;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function searchableAs(): string
-    {
-        return 'login_attempt_index';
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function toSearchableArray(): array
-    {
-        return $this->toArray();
     }
 }

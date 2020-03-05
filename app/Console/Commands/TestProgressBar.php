@@ -2,12 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Traits\ProgressBarOutput;
 use Illuminate\Console\Command;
+use App\Traits\ProgressBarOutput;
 
 class TestProgressBar extends Command
 {
-
     use ProgressBarOutput;
 
     /**

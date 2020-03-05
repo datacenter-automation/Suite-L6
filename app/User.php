@@ -2,18 +2,18 @@
 
 namespace App;
 
-use App\Traits\Lockable;
-use Biscolab\LaravelAuthLog\Traits\AuthLoggable;
 use DateTime;
 use Carbon\Carbon;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Lab404\Impersonate\Models\Impersonate;
+use App\Traits\Lockable;
 use Laravel\Cashier\Billable;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
-use Thomasjohnkane\Snooze\Traits\SnoozeNotifiable;
+use Illuminate\Notifications\Notifiable;
 use williamcruzme\FCM\Traits\HasDevices;
+use Lab404\Impersonate\Models\Impersonate;
+use Biscolab\LaravelAuthLog\Traits\AuthLoggable;
+use Thomasjohnkane\Snooze\Traits\SnoozeNotifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\User
@@ -55,6 +55,7 @@ use williamcruzme\FCM\Traits\HasDevices;
  * @property-read int|null $roles_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Cashier\Subscription[] $subscriptions
  * @property-read int|null $subscriptions_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User permission($permissions)
@@ -81,7 +82,6 @@ use williamcruzme\FCM\Traits\HasDevices;
  */
 class User extends Authenticatable
 {
-
     use AuthLoggable, Billable, HasDevices, HasRoles, Impersonate, Lockable, Notifiable, Searchable, SnoozeNotifiable;
 
     /**

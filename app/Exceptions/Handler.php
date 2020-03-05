@@ -3,15 +3,15 @@
 namespace App\Exceptions;
 
 use Exception;
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-//use Pyaesone17\Lapse\ErrorNotifiable;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Illuminate\Routing\Exceptions\InvalidSignatureException;
 use App\Listeners\LoggingListener;
-use Illuminate\Log\Events\MessageLogged;
-use Illuminate\Support\Facades\Storage;
+//use Pyaesone17\Lapse\ErrorNotifiable;
 use Illuminate\Support\ViewErrorBag;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Log\Events\MessageLogged;
+use Spatie\Permission\Exceptions\UnauthorizedException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Illuminate\Routing\Exceptions\InvalidSignatureException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Handler extends ExceptionHandler
@@ -75,8 +75,9 @@ class Handler extends ExceptionHandler
      *
      * @param \Exception $exception
      *
-     * @return void
      * @throws \Exception
+     *
+     * @return void
      */
     public function report(Exception $exception)
     {

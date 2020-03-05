@@ -26,6 +26,14 @@ class Kernel extends ConsoleKernel
     }
 
     /**
+     * Define the application's command schedule.
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('mailgun:import-email-and-attachments')->everyFiveMinutes();
+    }
+
+    /**
      * Get the timezone that should be used by default for scheduled events.
      *
      * @return \DateTimeZone|string|null
@@ -33,13 +41,5 @@ class Kernel extends ConsoleKernel
     protected function scheduleTimezone()
     {
         return env('APP_TIMEZONE', 'America/Chicago');
-    }
-
-    /**
-     * Define the application's command schedule.
-     */
-    protected function schedule(Schedule $schedule)
-    {
-        $schedule->command('mailgun:import-email-and-attachments')->everyFiveMinutes();
     }
 }

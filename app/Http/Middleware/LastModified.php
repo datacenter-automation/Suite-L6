@@ -2,13 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use File;
+use Closure;
 
 /**
  * Class LastModified
  *
- * @package App\Http\Middleware
  *
  * @todo
  */
@@ -25,7 +24,6 @@ class LastModified
      */
     public function handle($request, Closure $next)
     {
-
         $route = \Route::getRoutes()->match($request);
         dd($route->getActionName());
 

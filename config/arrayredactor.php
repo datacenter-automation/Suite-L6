@@ -2,7 +2,7 @@
 
 return [
 
-    /**
+    /*
      * The array keys to redact
      */
     'keys' => [

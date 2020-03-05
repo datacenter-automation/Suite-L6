@@ -4,7 +4,6 @@ namespace App\Traits;
 
 trait Lockable
 {
-
     public function getLockoutTime()
     {
         return $this->lockout_time;

@@ -11,15 +11,23 @@ class CreateAuthlogTable extends Migration
 {
 
     /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists(config('authlog.table_name'));
+    }
+
+    /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-
         Schema::create(config('authlog.table_name'), function (Blueprint $table) {
-
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('blame_on_user_id')->nullable();
@@ -39,16 +47,5 @@ class CreateAuthlogTable extends Migration
             $table->foreign('blame_on_user_id')->references('id')->on('users')->onDelete('RESTRICT')->onUpdate('RESTRICT');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('RESTRICT')->onUpdate('RESTRICT');
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-
-        Schema::dropIfExists(config('authlog.table_name'));
     }
 }

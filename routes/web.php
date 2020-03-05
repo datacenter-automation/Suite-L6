@@ -12,8 +12,8 @@
 */
 
 use App\Email;
-use Spatie\Honeypot\ProtectAgainstSpam;
 use williamcruzme\FCM\Facades\Device;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 ! in_array(request()->ip(), ['127.0.0.1', '216.80.104.45']) ? abort(401, 'IP address not on host whitelist.') : true;
 

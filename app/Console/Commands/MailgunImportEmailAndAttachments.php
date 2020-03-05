@@ -9,18 +9,18 @@ class MailgunImportEmailAndAttachments extends Command
 {
 
     /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'mailgun:import-email-and-attachments';
-
-    /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Import E-mail & Attachments from Mailgun.';
+
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'mailgun:import-email-and-attachments';
 
     /**
      * Create a new command instance.

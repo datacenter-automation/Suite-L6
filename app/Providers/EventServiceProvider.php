@@ -5,12 +5,12 @@ namespace App\Providers;
 use App\Events\FileUploaded;
 use App\Listeners\DecryptFile;
 use App\Listeners\EncryptFile;
+use App\Listeners\LoggingListener;
 use App\Events\FileDownloadRequested;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Log\Events\MessageLogged;
-use App\Listeners\LoggingListener;
 
 class EventServiceProvider extends ServiceProvider
 {

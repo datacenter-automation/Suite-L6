@@ -122,6 +122,17 @@ class RouteServiceProvider extends ServiceProvider
     }
 
     /**
+     * Define the "Server-fetched partials" routes for the application.
+     */
+    protected function mapServerFetchedPartialsRoutes()
+    {
+        Route::middleware([
+            'web',
+            'etag',
+        ])->prefix('partials')->namespace($this->namespace)->group(base_path('routes/server-fetched-partials.php'));
+    }
+
+    /**
      * Define the "Vendor" routes for the application.
      *
      * These routes all receive session state, CSRF protection, etc.
@@ -157,16 +168,5 @@ class RouteServiceProvider extends ServiceProvider
             'active_user',
             'whitegloves',
         ])->prefix('dashboard/whitegloves')->namespace($this->namespace)->group(base_path('routes/whiteglove.php'));
-    }
-
-    /**
-     * Define the "Server-fetched partials" routes for the application.
-     */
-    protected function mapServerFetchedPartialsRoutes()
-    {
-        Route::middleware([
-            'web',
-            'etag',
-        ])->prefix('partials')->namespace($this->namespace)->group(base_path('routes/server-fetched-partials.php'));
     }
 }
