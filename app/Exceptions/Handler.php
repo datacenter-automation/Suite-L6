@@ -2,8 +2,8 @@
 
 namespace App\Exceptions;
 
-use Throwable;
 use Exception;
+use Throwable;
 use App\Listeners\LoggingListener;
 //use Pyaesone17\Lapse\ErrorNotifiable;
 use Illuminate\Support\ViewErrorBag;
@@ -74,7 +74,7 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Throwable  $exception
+     * @param \Throwable $exception
      *
      * @throws \Throwable
      *
