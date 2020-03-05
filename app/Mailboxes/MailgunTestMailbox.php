@@ -2,8 +2,8 @@
 
 namespace App\Mailboxes;
 
-use App\Models\Email as ReceivedMail;
 use BeyondCode\Mailbox\InboundEmail;
+use App\Models\Email as ReceivedMail;
 
 class MailgunTestMailbox
 {

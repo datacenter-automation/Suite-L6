@@ -4,8 +4,8 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use App\Mail\TestMail;
-use App\Models\Email as ReceivedMail;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Email as ReceivedMail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class IncomingMailTest extends TestCase
