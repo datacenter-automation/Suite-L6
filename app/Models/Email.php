@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 //use BeyondCode\Mailbox\InboundEmail;
 use App\General\MailgunRetrieveAttachments;

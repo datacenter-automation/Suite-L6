@@ -2,7 +2,7 @@
 
 namespace App\Helpers;
 
-use App\Logger as LoggerModel;
+use App\Models\Logger as LoggerModel;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;

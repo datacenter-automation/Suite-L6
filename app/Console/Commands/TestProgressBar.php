@@ -23,7 +23,7 @@ class TestProgressBar extends Command
      */
     public function handle()
     {
-        $users = \App\User::all();
+        $users = \App\Models\User::all();
 
         $bar = $this->output->createProgressBar(count($users));
         $bar->start();

@@ -11,7 +11,7 @@
 |
 */
 
-use App\Email;
+use App\Models\Email;
 use williamcruzme\FCM\Facades\Device;
 use Spatie\Honeypot\ProtectAgainstSpam;
 

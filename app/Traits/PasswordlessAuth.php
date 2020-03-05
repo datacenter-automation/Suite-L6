@@ -2,7 +2,7 @@
 
 namespace App\Traits;
 
-use App\LoginAttempt;
+use App\Models\LoginAttempt;
 use Illuminate\Http\Request;
 use App\Notifications\NewLoginAttempt;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -98,7 +98,7 @@ trait PasswordlessAuth
      *
      * @param \Illuminate\Http\Request $request
      *
-     * @return \App\LoginAttempt
+     * @return \App\Models\LoginAttempt
      */
     protected function createLoginAttempt(Request $request)
     {

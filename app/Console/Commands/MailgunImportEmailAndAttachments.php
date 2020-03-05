@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Email;
+use App\Models\Email;
 use Illuminate\Console\Command;
 
 class MailgunImportEmailAndAttachments extends Command
@@ -35,7 +35,7 @@ class MailgunImportEmailAndAttachments extends Command
     /**
      * Execute the console command.
      *
-     * @param \App\Email $email
+     * @param \App\Models\Email $email
      *
      * @return array
      */

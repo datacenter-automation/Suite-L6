@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\LoginAttempt::class, function (Faker $faker) {
+$factory->define(App\Models\LoginAttempt::class, function (Faker $faker) {
     return [
         'email' => $faker->safeEmail,
         'token' => $faker->word,
