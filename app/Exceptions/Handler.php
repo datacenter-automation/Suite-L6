@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Throwable;
 use App\Listeners\LoggingListener;
 //use Pyaesone17\Lapse\ErrorNotifiable;
 use Illuminate\Support\ViewErrorBag;
@@ -50,7 +51,7 @@ class Handler extends ExceptionHandler
      *
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Throwable $exception)
     {
         if ($exception instanceof UnauthorizedException) {
             return response()->json([
@@ -73,13 +74,13 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param \Exception $exception
+     * @param \Throwable $exception
      *
-     * @throws \Exception
+     * @throws \Throwable
      *
      * @return void
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         if (app()->bound('honeybadger') && $this->shouldReport($exception)) {
             app('honeybadger')->notify($exception, app('request'));

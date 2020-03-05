@@ -1,9 +1,11 @@
 <?php
 
+use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Log Channel
@@ -35,41 +37,27 @@ return [
     'channels' => [
         'stack' => [
             'driver'            => 'stack',
-            'channels'          => ['single', 'daily', 'flare'],
+            'channels'          => ['single'],
             'ignore_exceptions' => false,
         ],
 
         'single' => [
             'driver' => 'single',
-            'path'   => storage_path('logs/dcas.log'),
+            'path'   => storage_path('logs/laravel.log'),
             'level'  => 'debug',
         ],
 
         'daily' => [
             'driver' => 'daily',
-            'path'   => storage_path('logs/dcas.log'),
+            'path'   => storage_path('logs/laravel.log'),
             'level'  => 'debug',
-            'days'   => 7,
-        ],
-
-        'mail' => [
-            'driver' => 'daily',
-            'path'   => storage_path('logs/mail.log'),
-            'level'  => 'debug',
-            'days'   => 1,
-        ],
-
-        'x-request-id' => [
-            'driver' => 'daily',
-            'path'   => storage_path('logs/debug--x-request-id.log'),
-            'level'  => 'debug',
-            'days'   => 7,
+            'days'   => 14,
         ],
 
         'slack' => [
             'driver'   => 'slack',
             'url'      => env('LOG_SLACK_WEBHOOK_URL'),
-            'username' => 'DCAS Log',
+            'username' => 'Laravel Log',
             'emoji'    => ':boom:',
             'level'    => 'critical',
         ],
@@ -85,9 +73,10 @@ return [
         ],
 
         'stderr' => [
-            'driver'  => 'monolog',
-            'handler' => StreamHandler::class,
-            'with'    => [
+            'driver'    => 'monolog',
+            'handler'   => StreamHandler::class,
+            'formatter' => env('LOG_STDERR_FORMATTER'),
+            'with'      => [
                 'stream' => 'php://stderr',
             ],
         ],
@@ -102,8 +91,14 @@ return [
             'level'  => 'debug',
         ],
 
-        'flare' => [
-            'driver' => 'flare',
+        'null' => [
+            'driver'  => 'monolog',
+            'handler' => NullHandler::class,
+        ],
+
+        'emergency' => [
+            'path' => storage_path('logs/laravel.log'),
         ],
     ],
+
 ];
