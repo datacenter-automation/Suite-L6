@@ -1,184 +1,184 @@
 {
-  "name": "datacenter-automation/suite-l6",
-  "type": "project",
-  "description": "FiberHop LLC - DCAS - Datacenter Automation Suite",
-  "keywords": [
-    "datacenter",
-    "dcas",
-    "fiberhop",
-    "framework",
-    "laravel",
-    "web hosting"
-  ],
-  "license": "proprietary",
-  "require": {
-    "php": "^7.4",
-    "ext-json": "*",
-    "alphametric/laravel-validation-rules": "^2.1",
-    "altek/eventually": "^1.0",
-    "auth0/login": "~5.0",
-    "barryvdh/laravel-cors": "^1.0",
-    "beyondcode/laravel-mailbox": "^1.3",
-    "biscolab/laravel-authlog": "^0.1.1",
-    "coconutcraig/laravel-postmark": "^2.7",
-    "coderello/laravel-populated-factory": "^0.3.0",
-    "coderello/laravel-shared-data": "^2.0.0",
-    "darkaonline/l5-swagger": "^6.0",
-    "doctrine/dbal": "^2.10",
-    "eluceo/ical": "^0.16.0",
-    "envant/eloquent-lockable": "^1.0",
-    "envant/fireable": "^1.0",
-    "facade/ignition": "^1.16.0",
-    "fetzi/server-timing": "^1.0",
-    "fideloper/proxy": "^4.2",
-    "florianv/exchanger": "^2.3",
-    "gdebrauwer/laravel-hateoas": "^1.3",
-    "google/recaptcha": "^1.2",
-    "graham-campbell/github": "^9.0.1",
-    "guzzlehttp/guzzle": "^6.5",
-    "hapidjus/laravel-impersonate-ui": "^1.2",
-    "honeybadger-io/honeybadger-laravel": "^2.1",
-    "illuminate/routing": "^6.8",
-    "illuminatech/db-safedelete": "^1.0",
-    "jeroennoten/laravel-adminlte": "^3.0",
-    "kriswallsmith/buzz": "^1.0",
-    "laracasts/flash": "^3.0",
-    "laravel/cashier": "^10.5",
-    "laravel/envoy": "^2.0.1",
-    "laravel/framework": "^6.12",
-    "laravel/scout": "^7.2.1",
-    "laravel/tinker": "^2.1",
-    "lcobucci/jwt": "^3.3",
-    "livewire/livewire": "^1.0.1",
-    "mailgun/mailgun-php": "^3.0",
-    "mohammad-fouladgar/eloquent-builder": "^2.1",
-    "mtownsend/array-redactor": "^1.0",
-    "mtownsend/laravel-make-trait": "^1.1",
-    "nyholm/psr7": "^1.2",
-    "php-http/guzzle6-adapter": "^2.0",
-    "predis/predis": "^1.1",
-    "pusher/pusher-php-server": "^4.1",
-    "sametsahindogan/response-object-creator": "^1.0",
-    "sarfraznawaz2005/loading": "^1.3",
-    "soarecostin/file-vault": "^1.0",
-    "spatie/laravel-honeypot": "^1.5.0",
-    "spatie/laravel-model-states": "^1.5",
-    "spatie/laravel-permission": "^3.6",
-    "spatie/laravel-rate-limited-job-middleware": "^1.2",
-    "spatie/laravel-resource-links": "^1.0",
-    "spatie/laravel-tail": "^4.0",
-    "stephenlake/laravel-mailsceptor": "^1.0",
-    "te7a-houdini/laroute": "^1.0",
-    "thepinecode/policy": "^0.2.0",
-    "thomasjohnkane/snooze": "^1.0",
-    "vladimir-yuldashev/laravel-queue-rabbitmq": "^10.1",
-    "williamcruzme/laravel-fcm": "^1.0"
-  },
-  "require-dev": {
-    "ahuggins/open-on-make": "^0.0.42",
-    "appstract/laravel-opcache": "^3.2",
-    "ayesh/composer-preload": "^0.0.8",
-    "barryvdh/laravel-debugbar": "^3.2",
-    "barryvdh/laravel-ide-helper": "^2.6",
-    "behat/behat": "^3.5",
-    "behat/mink": "^1.7",
-    "behat/mink-extension": "^2.3",
-    "behat/mink-selenium2-driver": "^1.3",
-    "beyondcode/laravel-dump-server": "^1.3",
-    "beyondcode/laravel-er-diagram-generator": "^1.4",
-    "crestapps/laravel-code-generator": "^2.4",
-    "drfraker/snipe-migrations": "^1.3",
-    "ergebnis/composer-normalize": "^2.2",
-    "friendsofphp/php-cs-fixer": "^2.16",
-    "fzaninotto/faker": "^1.9",
-    "infection/infection": "^0.15.3",
-    "jlapp/swaggervel": "dev-master",
-    "johnkary/phpunit-speedtrap": "^3.1",
-    "kris/laravel-form-builder": "^1.22",
-    "laracasts/behat-laravel-extension": "^1.1",
-    "laracasts/generators": "^1.1",
-    "laracasts/utilities": "^3.0",
-    "laravel/dusk": "^5.8",
-    "laravel/ui": "^1.2.0",
-    "mockery/mockery": "^1.3",
-    "mpociot/laravel-test-factory-helper": "^2.1.0",
-    "mtrajano/laravel-swagger": "^0.6.1",
-    "nunomaduro/collision": "^3.0.1",
-    "phpbench/phpbench": "^0.17.0",
-    "phpmd/phpmd": "^2.8",
-    "phpspec/phpspec": "^6.1",
-    "phpunit/phpunit": "^8.5",
-    "pipe-dream/laravel": "^0.2.1",
-    "rector/rector": "^0.7.3",
-    "sebastian/phpcpd": "^4.1.0",
-    "sensiolabs/security-checker": "^6.0",
-    "spatie/laravel-web-tinker": "^1.6",
-    "squizlabs/php_codesniffer": "^3.5",
-    "staudenmeir/dusk-updater": "^1.1",
-    "sti3bas/laravel-scout-array-driver": "^1.0.2",
-    "stolz/laravel-schema-spy": "^0.1.2",
-    "swagger-api/swagger-ui": "^3.25",
-    "symfony/browser-kit": "^4.4.5"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "dont-discover": []
-    },
-    "preload": {
-      "paths": [
-        "app",
-        "config",
-        "routes"
-      ],
-      "exclude": [
-        "database",
-        "tests"
-      ],
-      "no-status-check": false
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/",
-      "ComdexxSolutionsLLC\\": "vendor_internal/laravel-scout-mysql-driver/src/"
-    },
-    "classmap": [
-      "app/Macros",
-      "database/seeds",
-      "database/factories"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "scripts": {
-    "post-autoload-dump": [
-      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi",
-      "@php artisan ide-helper:generate",
-      "@php artisan ide-helper:meta",
-      "@php artisan ide-helper:model -RW",
-      "@php artisan dcas:clear-project-files",
-      "@php artisan dcas:make-tree-output",
-      "@php artisan dcas:make-phpdev-reports disable",
-      "@php artisan debugbar:clear",
-      "@php artisan dusk:update",
-      "@php artisan laroute:generate"
+    "name": "datacenter-automation/suite-l6",
+    "type": "project",
+    "description": "FiberHop LLC - DCAS - Datacenter Automation Suite",
+    "keywords": [
+        "datacenter",
+        "dcas",
+        "fiberhop",
+        "framework",
+        "laravel",
+        "web hosting"
     ],
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@php artisan key:generate --ansi"
-    ]
-  }
+    "license": "proprietary",
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "alphametric/laravel-validation-rules": "^2.1",
+        "altek/eventually": "^1.0",
+        "auth0/login": "~5.0",
+        "barryvdh/laravel-cors": "^1.0",
+        "beyondcode/laravel-mailbox": "^1.3",
+        "biscolab/laravel-authlog": "^0.1.1",
+        "coconutcraig/laravel-postmark": "^2.7",
+        "coderello/laravel-populated-factory": "^0.3.0",
+        "coderello/laravel-shared-data": "^2.0.0",
+        "darkaonline/l5-swagger": "^6.0",
+        "doctrine/dbal": "^2.10",
+        "eluceo/ical": "^0.16.0",
+        "envant/eloquent-lockable": "^1.0",
+        "envant/fireable": "^1.0",
+        "facade/ignition": "^1.16.0",
+        "fetzi/server-timing": "^1.0",
+        "fideloper/proxy": "^4.2",
+        "florianv/exchanger": "^2.3",
+        "gdebrauwer/laravel-hateoas": "^1.3",
+        "google/recaptcha": "^1.2",
+        "graham-campbell/github": "^9.0.1",
+        "guzzlehttp/guzzle": "^6.5",
+        "hapidjus/laravel-impersonate-ui": "^1.2",
+        "honeybadger-io/honeybadger-laravel": "^2.1",
+        "illuminate/routing": "^6.8",
+        "illuminatech/db-safedelete": "^1.0",
+        "jeroennoten/laravel-adminlte": "^3.0",
+        "kriswallsmith/buzz": "^1.0",
+        "laracasts/flash": "^3.0",
+        "laravel/cashier": "^10.5",
+        "laravel/envoy": "^2.0.1",
+        "laravel/framework": "^6.12",
+        "laravel/scout": "^7.2.1",
+        "laravel/tinker": "^2.1",
+        "lcobucci/jwt": "^3.3",
+        "livewire/livewire": "^1.0.1",
+        "mailgun/mailgun-php": "^3.0",
+        "mohammad-fouladgar/eloquent-builder": "^2.1",
+        "mtownsend/array-redactor": "^1.0",
+        "mtownsend/laravel-make-trait": "^1.1",
+        "nyholm/psr7": "^1.2",
+        "php-http/guzzle6-adapter": "^2.0",
+        "predis/predis": "^1.1",
+        "pusher/pusher-php-server": "^4.1",
+        "sametsahindogan/response-object-creator": "^1.0",
+        "sarfraznawaz2005/loading": "^1.3",
+        "soarecostin/file-vault": "^1.0",
+        "spatie/laravel-honeypot": "^1.5.0",
+        "spatie/laravel-model-states": "^1.5",
+        "spatie/laravel-permission": "^3.6",
+        "spatie/laravel-rate-limited-job-middleware": "^1.2",
+        "spatie/laravel-resource-links": "^1.0",
+        "spatie/laravel-tail": "^4.0",
+        "stephenlake/laravel-mailsceptor": "^1.0",
+        "te7a-houdini/laroute": "^1.0",
+        "thepinecode/policy": "^0.2.0",
+        "thomasjohnkane/snooze": "^1.0",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^10.1",
+        "williamcruzme/laravel-fcm": "^1.0",
+        "laravel/ui": "^2.0"
+    },
+    "require-dev": {
+        "ahuggins/open-on-make": "^0.0.42",
+        "appstract/laravel-opcache": "^3.2",
+        "ayesh/composer-preload": "^0.0.8",
+        "barryvdh/laravel-debugbar": "^3.2",
+        "barryvdh/laravel-ide-helper": "^2.6",
+        "behat/behat": "^3.5",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.3",
+        "behat/mink-selenium2-driver": "^1.3",
+        "beyondcode/laravel-dump-server": "^1.3",
+        "beyondcode/laravel-er-diagram-generator": "^1.4",
+        "crestapps/laravel-code-generator": "^2.4",
+        "drfraker/snipe-migrations": "^1.3",
+        "ergebnis/composer-normalize": "^2.2",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "fzaninotto/faker": "^1.9",
+        "infection/infection": "^0.15.3",
+        "jlapp/swaggervel": "dev-master",
+        "johnkary/phpunit-speedtrap": "^3.1",
+        "kris/laravel-form-builder": "^1.22",
+        "laracasts/behat-laravel-extension": "^1.1",
+        "laracasts/generators": "^1.1",
+        "laracasts/utilities": "^3.0",
+        "laravel/dusk": "^5.8",
+        "mockery/mockery": "^1.3",
+        "mpociot/laravel-test-factory-helper": "^2.1.0",
+        "mtrajano/laravel-swagger": "^0.6.1",
+        "nunomaduro/collision": "^3.0.1",
+        "phpbench/phpbench": "^0.17.0",
+        "phpmd/phpmd": "^2.8",
+        "phpspec/phpspec": "^6.1",
+        "phpunit/phpunit": "^8.5",
+        "pipe-dream/laravel": "^0.2.1",
+        "rector/rector": "^0.7.3",
+        "sebastian/phpcpd": "^4.1.0",
+        "sensiolabs/security-checker": "^6.0",
+        "spatie/laravel-web-tinker": "^1.6",
+        "squizlabs/php_codesniffer": "^3.5",
+        "staudenmeir/dusk-updater": "^1.1",
+        "sti3bas/laravel-scout-array-driver": "^1.0.2",
+        "stolz/laravel-schema-spy": "^0.1.2",
+        "swagger-api/swagger-ui": "^3.25",
+        "symfony/browser-kit": "^4.4.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        },
+        "preload": {
+            "paths": [
+                "app",
+                "config",
+                "routes"
+            ],
+            "exclude": [
+                "database",
+                "tests"
+            ],
+            "no-status-check": false
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "ComdexxSolutionsLLC\\": "vendor_internal/laravel-scout-mysql-driver/src/"
+        },
+        "classmap": [
+            "app/Macros",
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:model -RW",
+            "@php artisan dcas:clear-project-files",
+            "@php artisan dcas:make-tree-output",
+            "@php artisan dcas:make-phpdev-reports disable",
+            "@php artisan debugbar:clear",
+            "@php artisan dusk:update",
+            "@php artisan laroute:generate"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
 }
