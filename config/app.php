@@ -1,14 +1,10 @@
 <?php
 
-use App\Providers\MailboxServiceProvider as AppMailboxServiceProvider;
-use App\Providers\OtherValidationRulesProvider;
-use Auth0\Login\LoginServiceProvider;
-use Facades\App\General\DcasLogger;
-use GrahamCampbell\GitHub\Facades\GitHub as GrahamCampbellGitHub;
-use Illuminate\Support\Arr;
 use App\Helpers\Logger;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Facades\App\General\DcasLogger;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Log;
@@ -21,6 +17,7 @@ use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
 use App\Providers\AppServiceProvider;
+use Auth0\Login\LoginServiceProvider;
 use Fouladgar\EloquentBuilder\Facade;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
@@ -52,11 +49,13 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Cache\CacheServiceProvider;
 use Illuminate\Queue\QueueServiceProvider;
 use Illuminate\Redis\RedisServiceProvider;
+use Pyaesone17\Lapse\LapseServiceProvider;
 use Illuminate\Hashing\HashServiceProvider;
 use Illuminate\Cookie\CookieServiceProvider;
 use Illuminate\Support\Facades\Notification;
 use Fouladgar\EloquentBuilder\ServiceProvider;
 use Illuminate\Session\SessionServiceProvider;
+use App\Providers\OtherValidationRulesProvider;
 use Illuminate\Database\DatabaseServiceProvider;
 use Illuminate\Pipeline\PipelineServiceProvider;
 use Illuminate\Encryption\EncryptionServiceProvider;
@@ -69,9 +68,10 @@ use JeroenNoten\LaravelAdminLte\AdminLteServiceProvider;
 use Illuminate\Notifications\NotificationServiceProvider;
 use Illuminate\Auth\Passwords\PasswordResetServiceProvider;
 use Illuminate\Foundation\Providers\FoundationServiceProvider;
+use GrahamCampbell\GitHub\Facades\GitHub as GrahamCampbellGitHub;
 use Illuminate\Foundation\Providers\ConsoleSupportServiceProvider;
+use App\Providers\MailboxServiceProvider as AppMailboxServiceProvider;
 use ComdexxSolutionsLLC\MySQLScout\Providers\MySQLScoutServiceProvider;
-use Pyaesone17\Lapse\LapseServiceProvider;
 
 return [
     /*

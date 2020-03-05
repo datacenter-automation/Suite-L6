@@ -2,9 +2,9 @@
 
 namespace App\Helpers;
 
-use App\Logger as LoggerModel;
-use Illuminate\Support\Facades\Route;
+use App\Models\Logger as LoggerModel;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 
 class Logger
@@ -15,7 +15,7 @@ class Logger
      */
     public static function add()
     {
-        $route = explode("@", Route::getCurrentRoute()->getActionName());
+        $route = explode('@', Route::getCurrentRoute()->getActionName());
 
         $controller = $route[0];
         $action = $route[1];

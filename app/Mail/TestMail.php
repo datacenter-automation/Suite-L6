@@ -6,12 +6,11 @@ use Illuminate\Mail\Mailable;
 
 class TestMail extends Mailable
 {
+    public $body;
 
     public $sender;
 
     public $subject;
-
-    public $body;
 
     /**
      * TestMail constructor.

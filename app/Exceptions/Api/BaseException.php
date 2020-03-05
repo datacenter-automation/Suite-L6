@@ -3,19 +3,32 @@
 namespace App\Exceptions\Api;
 
 use Exception;
-use Illuminate\Http\Request;
 use ReflectionClass;
+use Illuminate\Http\Request;
 
 class BaseException extends Exception
 {
+
+    /**
+     * Get trace identifier.
+     *
+     * @throws \ReflectionException
+     *
+     * @return string
+     */
+    final public function getTraceId(): string
+    {
+        return sprintf('API_%s_%s_%s', $this->prepareClassShortcut(), $this->preparePathShortcut(), time());
+    }
 
     /**
      * Render the exception as an HTTP response.
      *
      * @param \Illuminate\Http\Request $request
      *
-     * @return \Illuminate\Http\JsonResponse
      * @throws \ReflectionException
+     *
+     * @return \Illuminate\Http\JsonResponse
      */
     final public function render(Request $request)
     {
@@ -30,25 +43,15 @@ class BaseException extends Exception
     }
 
     /**
-     * Get trace identifier.
-     *
-     * @return string
-     * @throws \ReflectionException
-     */
-    final public function getTraceId(): string
-    {
-        return sprintf("API_%s_%s_%s", $this->prepareClassShortcut(), $this->preparePathShortcut(), time());
-    }
-
-    /**
      * Get shortened class identifier.
      *
-     * @return string|string[]|null
      * @throws \ReflectionException
+     *
+     * @return string|string[]|null
      */
     final protected function prepareClassShortcut()
     {
-        return preg_replace("/[^A-Z]/", "", str_replace('Exception', '', (new ReflectionClass($this))->getShortName()));
+        return preg_replace('/[^A-Z]/', '', str_replace('Exception', '', (new ReflectionClass($this))->getShortName()));
     }
 
     /**

@@ -8,18 +8,18 @@ class ClearIncidentFiles extends Command
 {
 
     /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'dcas:clear-incident-files';
-
-    /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Clear incident files in ./storage/app/incidents/';
+
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'dcas:clear-incident-files';
 
     /**
      * Execute the console command.

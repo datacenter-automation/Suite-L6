@@ -5,14 +5,13 @@ namespace App\Http\Controllers\API\V1;
 use App\Events\FileUploaded;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use SoareCostin\FileVault\Facades\FileVault;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
-use Illuminate\Support\Facades\File;
 
 /**
  * Class UploadController
  *
- * @package App\Http\Controllers\API\V1
  *
  * @todo show(), index(), destroy()
  */
@@ -48,20 +47,21 @@ class UploadController extends Controller
      *
      * @param string $upload
      *
-     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     *
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
     public function show(string $upload)
     {
-        $encryptedFile = storage_path("uploads" . DIRECTORY_SEPARATOR . "{$upload}.file.enc");
+        $encryptedFile = storage_path('uploads' . DIRECTORY_SEPARATOR . "{$upload}.file.enc");
 
-        $decryptedFile = storage_path("uploads" . DIRECTORY_SEPARATOR . "{$upload}.file");
+        $decryptedFile = storage_path('uploads' . DIRECTORY_SEPARATOR . "{$upload}.file");
 
         if (! \File::exists($encryptedFile)) {
             throw new FileException("{$encryptedFile} not found!");
         }
 
-        $m = FileVault::decrypt(basename($encryptedFile),  basename($decryptedFile), false);
+        $m = FileVault::decrypt(basename($encryptedFile), basename($decryptedFile), false);
 
         dd($m);
 

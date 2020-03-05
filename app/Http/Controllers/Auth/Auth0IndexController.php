@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Auth;
 use App;
+use Auth;
 use Redirect;
+use App\Http\Controllers\Controller;
 
 class Auth0IndexController extends Controller
 {

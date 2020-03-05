@@ -2,12 +2,11 @@
 
 namespace App\Traits;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Database\Eloquent\Model;
 
 trait Encryptable
 {
-
     public static function bootEncryptable()
     {
         static::retrieved(function (Model $model) {

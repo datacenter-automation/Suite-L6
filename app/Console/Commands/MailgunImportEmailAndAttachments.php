@@ -2,18 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Email;
+use App\Models\Email;
 use Illuminate\Console\Command;
 
 class MailgunImportEmailAndAttachments extends Command
 {
-
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'mailgun:import-email-and-attachments';
 
     /**
      * The console command description.
@@ -21,6 +14,13 @@ class MailgunImportEmailAndAttachments extends Command
      * @var string
      */
     protected $description = 'Import E-mail & Attachments from Mailgun.';
+
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'mailgun:import-email-and-attachments';
 
     /**
      * Create a new command instance.
@@ -35,7 +35,7 @@ class MailgunImportEmailAndAttachments extends Command
     /**
      * Execute the console command.
      *
-     * @param \App\Email $email
+     * @param \App\Models\Email $email
      *
      * @return array
      */

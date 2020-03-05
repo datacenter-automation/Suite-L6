@@ -26,18 +26,18 @@ class ThrottleSimultaneousRequests //extends Middleware
     protected $limit;
 
     /**
-     * The current user's signature.
-     *
-     * @var string
-     */
-    protected $signature;
-
-    /**
      * Prefix to be on the request signature.
      *
      * @var string
      */
     protected $prefix = 'concurrent:';
+
+    /**
+     * The current user's signature.
+     *
+     * @var string
+     */
+    protected $signature;
 
     /**
      * Handle the incoming request.
@@ -63,40 +63,6 @@ class ThrottleSimultaneousRequests //extends Middleware
     }
 
     /**
-     * Handle the outgoing response.
-     *
-     * @param \Illuminate\Http\Request  $request
-     * @param \Illuminate\Http\Response $response
-     *
-     * @return mixed
-     */
-    public function terminate($request, $response)
-    {
-        $this->decrement();
-
-        return $response;
-    }
-
-    /**
-     * Get the number of remaining concurrent requests the user can run.
-     */
-    protected function getRemainingRequests(int $limit): int
-    {
-        return max(0, $limit - Cache::get($this->signature));
-    }
-
-    /**
-     * Get headers to denote the current rate limits the user has.
-     */
-    protected function getHeaders(): array
-    {
-        return [
-            'X-RateLimit-Limit'     => $this->limit,
-            'X-RateLimit-Remaining' => $this->getRemainingRequests($this->limit),
-        ];
-    }
-
-    /**
      * Manually set the signature for the current request.
      *
      * @param \Illuminate\Http\Request $request
@@ -117,50 +83,18 @@ class ThrottleSimultaneousRequests //extends Middleware
     }
 
     /**
-     * Resolve the request signature for the current requesting user.
+     * Handle the outgoing response.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Response $response
      *
-     * @return string
-     * @throws \RuntimeException
+     * @return mixed
      */
-    protected function resolveRequestSignature($request)
+    public function terminate($request, $response)
     {
-        $user = $request->user();
+        $this->decrement();
 
-        $route = $request->route();
-
-        if (! empty($this->signature)) {
-            return $this->signature;
-        }
-
-        if ($user) {
-            return $user->getAuthIdentifier();
-        }
-
-        if ($route) {
-            return $route->getDomain() . '|' . $request->ip();
-        }
-
-        throw new RuntimeException('Unable to generate the request signature. Route unavailable.');
-    }
-
-    /**
-     * Increment the count of currently running requests for the current user by 1.
-     *
-     * @return integer
-     */
-    protected function increment(): int
-    {
-        $value = 1;
-
-        if (Cache::has($this->signature)) {
-            $value = Cache::get($this->signature) + 1;
-        }
-
-        Cache::put($this->signature, $value, $this->cacheForMinutes);
-
-        return $value;
+        return $response;
     }
 
     /**
@@ -183,5 +117,72 @@ class ThrottleSimultaneousRequests //extends Middleware
         Cache::put($this->signature, $value);
 
         return $value;
+    }
+
+    /**
+     * Get headers to denote the current rate limits the user has.
+     */
+    protected function getHeaders(): array
+    {
+        return [
+            'X-RateLimit-Limit'     => $this->limit,
+            'X-RateLimit-Remaining' => $this->getRemainingRequests($this->limit),
+        ];
+    }
+
+    /**
+     * Get the number of remaining concurrent requests the user can run.
+     */
+    protected function getRemainingRequests(int $limit): int
+    {
+        return max(0, $limit - Cache::get($this->signature));
+    }
+
+    /**
+     * Increment the count of currently running requests for the current user by 1.
+     *
+     * @return integer
+     */
+    protected function increment(): int
+    {
+        $value = 1;
+
+        if (Cache::has($this->signature)) {
+            $value = Cache::get($this->signature) + 1;
+        }
+
+        Cache::put($this->signature, $value, $this->cacheForMinutes);
+
+        return $value;
+    }
+
+    /**
+     * Resolve the request signature for the current requesting user.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @throws \RuntimeException
+     *
+     * @return string
+     */
+    protected function resolveRequestSignature($request)
+    {
+        $user = $request->user();
+
+        $route = $request->route();
+
+        if (! empty($this->signature)) {
+            return $this->signature;
+        }
+
+        if ($user) {
+            return $user->getAuthIdentifier();
+        }
+
+        if ($route) {
+            return $route->getDomain() . '|' . $request->ip();
+        }
+
+        throw new RuntimeException('Unable to generate the request signature. Route unavailable.');
     }
 }

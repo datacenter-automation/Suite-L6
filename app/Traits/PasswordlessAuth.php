@@ -2,40 +2,23 @@
 
 namespace App\Traits;
 
-use App\LoginAttempt;
+use App\Models\LoginAttempt;
+use Illuminate\Http\Request;
 use App\Notifications\NewLoginAttempt;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
 
 trait PasswordlessAuth
 {
-
     use AuthenticatesUsers;
-
-    /**
-     * Validate the user login request.
-     *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return void
-     */
-    protected function validateLogin(Request $request)
-    {
-        $messages = ['exists' => trans('auth.exists')];
-
-        $this->validate($request, [
-            $this->username() => 'required|email|exists:users',
-        ], $messages);
-    }
 
     /**
      * Handle a login attempt request to the application.
      *
      * @param \Illuminate\Http\Request $request
      *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response|void
-     *
      * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response|void
      */
     public function attempt(Request $request)
     {
@@ -60,9 +43,11 @@ trait PasswordlessAuth
      * Handle a login request to the application.
      *
      * @param \Illuminate\Http\Request $request
+     * @param mixed                    $token
+     *
+     * @throws \Illuminate\Validation\ValidationException
      *
      * @return \Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response|void
-     * @throws \Illuminate\Validation\ValidationException
      */
     public function login($token, Request $request)
     {
@@ -79,6 +64,16 @@ trait PasswordlessAuth
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    /**
+     * @param $request
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function sendAttemptResponse($request)
+    {
+        return \View::make('auth.link-sent');
     }
 
     /**
@@ -103,7 +98,7 @@ trait PasswordlessAuth
      *
      * @param \Illuminate\Http\Request $request
      *
-     * @return \App\LoginAttempt
+     * @return \App\Models\LoginAttempt
      */
     protected function createLoginAttempt(Request $request)
     {
@@ -118,12 +113,18 @@ trait PasswordlessAuth
     }
 
     /**
-     * @param $request
+     * Validate the user login request.
      *
-     * @return \Illuminate\Contracts\View\View
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return void
      */
-    public function sendAttemptResponse($request)
+    protected function validateLogin(Request $request)
     {
-        return \View::make('auth.link-sent');
+        $messages = ['exists' => trans('auth.exists')];
+
+        $this->validate($request, [
+            $this->username() => 'required|email|exists:users',
+        ], $messages);
     }
 }

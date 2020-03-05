@@ -6,6 +6,29 @@ trait ManipulateEmailData
 {
 
     /**
+     * @todo
+     *
+     * @return mixed
+     */
+    public function manipulateMessageHeaders()
+    {
+        return $this->message_headers;
+    }
+
+    /**
+     * Tweak subject to add inbound e-mail account.
+     *
+     * @return string
+     */
+    public function manipulateSubject()
+    {
+        $mailbox = strtoupper(explode('"', str_before($this->recipients, '@'))[1]);
+        $trimmedSubject = trim($this->subject, '"');
+
+        return sprintf('[%s] %s', $mailbox, $trimmedSubject);
+    }
+
+    /**
      * Output Merged Messages.
      *
      * @return array
@@ -15,16 +38,16 @@ trait ManipulateEmailData
         $duplicateMessages = static::findDuplicateMessages()->toArray();
 
         $original = array_merge($duplicateMessages[0], $duplicateMessages[1]);
-        unset($original["id"], $original["recipients"]);
+        unset($original['id'], $original['recipients']);
 
         $newData = [
             'ids'        => [
-                $duplicateMessages[0]["id"],
-                $duplicateMessages[1]["id"],
+                $duplicateMessages[0]['id'],
+                $duplicateMessages[1]['id'],
             ],
             'recipients' => [
-                $duplicateMessages[0]["recipients"],
-                $duplicateMessages[1]["recipients"],
+                $duplicateMessages[0]['recipients'],
+                $duplicateMessages[1]['recipients'],
             ],
         ];
 
@@ -47,28 +70,5 @@ trait ManipulateEmailData
         $duplicateMessageId = $duplicateEmails->first()->message_id;
 
         return static::where('message_id', '=', $duplicateMessageId)->get();
-    }
-
-    /**
-     * Tweak subject to add inbound e-mail account.
-     *
-     * @return string
-     */
-    public function manipulateSubject()
-    {
-        $mailbox = strtoupper(explode('"', str_before($this->recipients, '@'))[1]);
-        $trimmedSubject = trim($this->subject, '"');
-
-        return sprintf("[%s] %s", $mailbox, $trimmedSubject);
-    }
-
-    /**
-     * @todo
-     *
-     * @return mixed
-     */
-    public function manipulateMessageHeaders()
-    {
-        return $this->message_headers;
     }
 }

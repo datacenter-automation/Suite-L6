@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Website\SubMenuPage[] $submenus
  * @property-read int|null $submenus_count
+ *
  * @method static bool|null forceDelete()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\MenuPage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\MenuPage newQuery()
@@ -47,7 +48,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class MenuPage extends BaseModel
 {
-
     use SoftDeletes;
 
     /**

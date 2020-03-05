@@ -3,17 +3,18 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
 
 class NewLoginAttempt extends Notification
 {
-
     use Queueable;
 
     /**
      * Create a new notification instance.
+     *
+     * @param mixed $attempt
      *
      * @return void
      */
@@ -23,15 +24,15 @@ class NewLoginAttempt extends Notification
     }
 
     /**
-     * Get the notification's delivery channels.
+     * Get the array representation of the notification.
      *
      * @param mixed $notifiable
      *
      * @return array
      */
-    public function via($notifiable)
+    public function toArray($notifiable)
     {
-        return ['mail'];
+        return [];
     }
 
     /**
@@ -53,14 +54,14 @@ class NewLoginAttempt extends Notification
     }
 
     /**
-     * Get the array representation of the notification.
+     * Get the notification's delivery channels.
      *
      * @param mixed $notifiable
      *
      * @return array
      */
-    public function toArray($notifiable)
+    public function via($notifiable)
     {
-        return [];
+        return ['mail'];
     }
 }

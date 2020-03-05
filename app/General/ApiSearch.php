@@ -2,8 +2,8 @@
 
 namespace App\General;
 
-use App\Contracts\SearchContract;
 use Illuminate\Http\Request;
+use App\Contracts\SearchContract;
 use Illuminate\Support\Collection;
 
 class ApiSearch implements SearchContract
@@ -12,9 +12,9 @@ class ApiSearch implements SearchContract
     /**
      * @inheritDoc
      */
-    public function sort(Request $request): Collection
+    public function fields(Request $request): Collection
     {
-        // TODO: Implement sort() method.
+        // TODO: Implement fields() method.
     }
 
     /**
@@ -28,9 +28,9 @@ class ApiSearch implements SearchContract
     /**
      * @inheritDoc
      */
-    public function state(Request $request): Collection
+    public function paginate(Request $request): Collection
     {
-        // TODO: Implement state() method.
+        // TODO: Implement paginate() method.
     }
 
     /**
@@ -44,16 +44,16 @@ class ApiSearch implements SearchContract
     /**
      * @inheritDoc
      */
-    public function fields(Request $request): Collection
+    public function sort(Request $request): Collection
     {
-        // TODO: Implement fields() method.
+        // TODO: Implement sort() method.
     }
 
     /**
      * @inheritDoc
      */
-    public function paginate(Request $request): Collection
+    public function state(Request $request): Collection
     {
-        // TODO: Implement paginate() method.
+        // TODO: Implement state() method.
     }
 }

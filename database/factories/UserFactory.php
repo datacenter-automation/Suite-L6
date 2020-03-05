@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 use Symfony\Component\Console\Output\ConsoleOutput;
@@ -35,4 +35,3 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token'    => Str::random(10),
     ];
 });
-

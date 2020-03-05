@@ -4,6 +4,17 @@ namespace App\General;
 
 class MailgunMessage
 {
+    protected $attachments;
+
+    protected $body_html;
+
+    protected $body_plain;
+
+    protected $content_id_map;
+
+    protected $from;
+
+    protected $message_headers;
 
     protected $message_id;
 
@@ -11,27 +22,15 @@ class MailgunMessage
 
     protected $sender;
 
-    protected $from;
-
-    protected $x_envelope_from;
-
-    protected $subject;
-
-    protected $body_plain;
-
-    protected $stripped_text;
+    protected $stripped_html;
 
     protected $stripped_signature;
 
-    protected $body_html;
+    protected $stripped_text;
 
-    protected $stripped_html;
+    protected $subject;
 
-    protected $attachments;
-
-    protected $message_headers;
-
-    protected $content_id_map;
+    protected $x_envelope_from;
 
     /**
      * MailgunMessage constructor.

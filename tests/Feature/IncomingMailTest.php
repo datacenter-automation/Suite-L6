@@ -2,15 +2,14 @@
 
 namespace Tests\Feature;
 
-use App\Email as ReceivedMail;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Mail\TestMail;
+use App\Models\Email as ReceivedMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class IncomingMailTest extends TestCase
 {
-
     use RefreshDatabase;
 
     public function setUp(): void
@@ -21,7 +20,7 @@ class IncomingMailTest extends TestCase
     }
 
     /** @test * */
-    function incoming_mail_is_saved_to_the_mails_table()
+    public function incoming_mail_is_saved_to_the_mails_table()
     {
         // Given: we have an e-mail﻿
         $email = new TestMail($from = 'sender@example.com', $subject = 'Test E-mail', $body = 'Some example text in the body');

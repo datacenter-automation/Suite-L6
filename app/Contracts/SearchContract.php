@@ -13,7 +13,7 @@ interface SearchContract
      *
      * @return \Illuminate\Support\Collection
      */
-    public function sort(Request $request): Collection;
+    public function fields(Request $request): Collection;
 
     /**
      * @param \Illuminate\Http\Request $request
@@ -27,7 +27,7 @@ interface SearchContract
      *
      * @return \Illuminate\Support\Collection
      */
-    public function state(Request $request): Collection;
+    public function paginate(Request $request): Collection;
 
     /**
      * @param \Illuminate\Http\Request $request
@@ -41,12 +41,12 @@ interface SearchContract
      *
      * @return \Illuminate\Support\Collection
      */
-    public function fields(Request $request): Collection;
+    public function sort(Request $request): Collection;
 
     /**
      * @param \Illuminate\Http\Request $request
      *
      * @return \Illuminate\Support\Collection
      */
-    public function paginate(Request $request): Collection;
+    public function state(Request $request): Collection;
 }

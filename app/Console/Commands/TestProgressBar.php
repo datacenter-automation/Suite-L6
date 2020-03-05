@@ -2,12 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Traits\ProgressBarOutput;
 use Illuminate\Console\Command;
+use App\Traits\ProgressBarOutput;
 
 class TestProgressBar extends Command
 {
-
     use ProgressBarOutput;
 
     /**
@@ -24,7 +23,7 @@ class TestProgressBar extends Command
      */
     public function handle()
     {
-        $users = \App\User::all();
+        $users = \App\Models\User::all();
 
         $bar = $this->output->createProgressBar(count($users));
         $bar->start();

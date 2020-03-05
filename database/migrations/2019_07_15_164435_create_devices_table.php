@@ -8,6 +8,16 @@ class CreateDevicesTable extends Migration
 {
 
     /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('devices');
+    }
+
+    /**
      * Run the migrations.
      *
      * @return void
@@ -21,15 +31,5 @@ class CreateDevicesTable extends Migration
             $table->string('user_type');
             $table->timestamps();
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('devices');
     }
 }

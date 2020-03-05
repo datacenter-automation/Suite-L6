@@ -2,7 +2,7 @@
 
 namespace App\General;
 
-use App\Email;
+use App\Models\Email;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise\EachPromise;
 use GuzzleHttp\Psr7\Response;
