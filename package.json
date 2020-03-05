@@ -106,7 +106,7 @@
         "workbox-webpack-plugin": "^5.0.0"
     },
     "dependencies": {
-        "@babel/preset-env": "^7.8.6",
+        "@babel/preset-env": "^7.8.7",
         "@cesium133/forgjs": "^2.1.4",
         "@fortawesome/fontawesome-free": "^5.12.1",
         "@tailwindcss/custom-forms": "^0.2.1",
