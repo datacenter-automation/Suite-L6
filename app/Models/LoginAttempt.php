@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use App\Models\BaseModel;
 use Illuminate\Notifications\Notifiable;
 
 /**
