@@ -1,8 +1,7 @@
 <?php
 
-use App\Models\User;
-
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -15,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard'     => 'web',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -38,14 +37,14 @@ return [
 
     'guards' => [
         'web' => [
-            'driver'   => 'session',
+            'driver' => 'session',
             'provider' => 'users',
         ],
 
         'api' => [
-            'driver'   => 'token',
+            'driver' => 'token',
             'provider' => 'users',
-            'hash'     => true,
+            'hash' => false,
         ],
     ],
 
@@ -62,16 +61,20 @@ return [
     | sources which represent each model / table. These sources may then
     | be assigned to any extra authentication guards you have defined.
     |
-    | Supported: "database", "eloquent", "auth0"
+    | Supported: "database", "eloquent"
     |
     */
 
     'providers' => [
         'users' => [
-            //'driver' => 'auth0',
             'driver' => 'eloquent',
-            'model'  => User::class,
+            'model' => App\User::class,
         ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
     /*
@@ -92,8 +95,8 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table'    => 'password_resets',
-            'expire'   => 60,
+            'table' => 'password_resets',
+            'expire' => 60,
             'throttle' => 60,
         ],
     ],
@@ -109,5 +112,6 @@ return [
     |
     */
 
-    'password_timeout' => 900,
+    'password_timeout' => 10800,
+
 ];
