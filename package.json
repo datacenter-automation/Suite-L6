@@ -118,7 +118,7 @@
         "html5shiv": "^3.7.3",
         "icheck-bootstrap": "^3.0.1",
         "in-viewport": "^3.6.0",
-        "ionicons": "^5.0.0",
+        "ionicons": "^5.1.0",
         "laravel-echo": "^1.6.1",
         "lozad": "^1.14.0",
         "material-design-iconic-font": "^2.2.0",
