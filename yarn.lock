@@ -7535,10 +7535,10 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
-ionicons@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.0.0.tgz#a97c37af0ba48eaafe9c411299af87722ccbbedf"
-  integrity sha512-tqKI5QyqCQOikbWYIA7teJPPXKfYZhEff8ARvbkOIh7PWbKI7sd0IBJcjhbw/mUilIA7U9Bcdm7qGBPhVWOCWg==
+ionicons@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.1.2.tgz#f00f17d2f23be94e8a248c9ebbaea236a6132f0d"
+  integrity sha512-zO7ZgbBbXhpA7cXO2rDzTNdcCqErjg1Sprq/ossTvaiV0MriOjRE7JO3EGvYjDTPzF9YALGpvLXqCgsRT0tprA==
 
 ip-regex@^1.0.1:
   version "1.0.3"
