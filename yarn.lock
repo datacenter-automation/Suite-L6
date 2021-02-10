@@ -1074,6 +1074,11 @@
   resolved "https://registry.yarnpkg.com/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz#8da5c6530915653f3a1f38fd5f101d8c3f8079c5"
   integrity sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
 
+"@stencil/core@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.4.0.tgz#17b45629c8986e35dcbce3f7dab7d64beede83f2"
+  integrity sha512-gU6+Yyd6O0KrCSS/O6j8KKqmRo+/Dcs2fI0+APCpbAWK+nqhwDISpdnSEfGDCLMoAC08XOZCycBRk2K1VGnEcg==
+
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-1.4.1.tgz#bf1343e5a926e5a1da55e3affd761dda4ce143ef"
@@ -7535,10 +7540,12 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
-ionicons@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.0.0.tgz#a97c37af0ba48eaafe9c411299af87722ccbbedf"
-  integrity sha512-tqKI5QyqCQOikbWYIA7teJPPXKfYZhEff8ARvbkOIh7PWbKI7sd0IBJcjhbw/mUilIA7U9Bcdm7qGBPhVWOCWg==
+ionicons@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.5.0.tgz#74ab783be11bee60e4351153c80b6d0682e5125a"
+  integrity sha512-0DUHTeoIrGSY+KNyNDaQW7v5+mDstjSkjx8dzT925kXKYBDrN3sGs8kUcSSQbTK132U4CbgDEZkn7FDUa9x8Qw==
+  dependencies:
+    "@stencil/core" "^2.4.0"
 
 ip-regex@^1.0.1:
   version "1.0.3"
