@@ -26,7 +26,7 @@
         "beautifier": "^0.1.7",
         "bootstrap": "^4.4.1",
         "browser-env": "^3.3.0",
-        "browser-sync": "^2.26.7",
+        "browser-sync": "^2.29.1",
         "browser-sync-webpack-plugin": "^2.2.2",
         "bs-console-info": "^1.0.2",
         "bs-console-qrcode": "^1.0.3",
